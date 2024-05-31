@@ -1,0 +1,14 @@
+site_name: Documentation for WGSE-NG
+site_url: https://wgse-ng.github.io
+theme:
+  name: material
+  palette: 
+    scheme: slate
+    primary: blue grey
+    accent: light blue
+  logo: logo.jpg
+repo_url: https://github.com/wgse-ng/wgse-ng
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true

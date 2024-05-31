@@ -1,0 +1,733 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://wgse-ng.github.io/">
+      
+      
+      
+        <link rel="next" href="API/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Documentation for WGSE-NG</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-wgse-ng" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Documentation for WGSE-NG" class="md-header__button md-logo" aria-label="Documentation for WGSE-NG" data-md-component="logo">
+      
+  <img src="logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation for WGSE-NG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Welcome to WGSE-NG
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wgse-ng/wgse-ng" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Documentation for WGSE-NG" class="md-nav__button md-logo" aria-label="Documentation for WGSE-NG" data-md-component="logo">
+      
+  <img src="logo.jpg" alt="logo">
+
+    </a>
+    Documentation for WGSE-NG
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wgse-ng/wgse-ng" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Welcome to WGSE-NG
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to WGSE-NG
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Launch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pyinstaller-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyInstaller release
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration file sample
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced-topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Launch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pyinstaller-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyInstaller release
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration file sample
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="welcome-to-wgse-ng">Welcome to WGSE-NG</h1>
+<p>WGSE-NG is a tool designed for manipulating and extracting data from files representing whole-sequenced human genomes. It provides functionality to load, parse, filter, transform, and analyze genomic data. The name WGSE is an acronym that stands for "<em>Whole Genome Sequencing Extract</em>". </p>
+<p>WGSE-NG is an attempt to re-engineering an existing tool called <a href="https://wgse.io">WGSE</a>. See the <a href="#faqs">FAQs</a> to see how they differs. WGSE and WGSE-NG are  heavily relying on a suite of existing tools called <a href="https://samtools.github.io/">samtools</a> but they provide a more user-friendly interface.</p>
+<h3 id="launch">Launch</h3>
+<p>WGSE runs on Windows and Linux. It should work also on MacOS but was never tested on it. Follow the installation procedure below according to your OS.
+The only currently supported way to install <code>WGSE-NG</code> is with a pypi package.
+This require python and pip installed. The procedure is the same on every supported OSs. Note WGSE-NG is still in alpha state and many things are not working or they may broke unexpectedly.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Debian-based distros</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>python -m pip install wgse-ng
+wgse
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>IMPORTANT</strong>: WGSE-NG is not thoroughly Please see the <a href="#troubleshooting">troubleshooting</a> section.
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libqt6waylandclient6<span class="w"> </span>samtools<span class="w"> </span>bcftools<span class="w"> </span>-y
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>wgse-ng
+wgse
+</code></pre></div></p>
+</div>
+</div>
+</div>
+<h4 id="pyinstaller-release">PyInstaller release</h4>
+<p>There's a PyInstaller build the is occasionally executed to build a single-file binary.
+The artifacts are here: <a href="https://github.com/WGSE-NG/WGSE-NG/actions/workflows/python-pyinstaller-win.yml">windows</a>, <a href="https://github.com/WGSE-NG/WGSE-NG/actions/workflows/python-pyinstaller-linux.yml">linux</a>. To use them, simply download the file and open it.</p>
+<p>Unless differently indicated, this is not a recommended way to run WGSE-NG for the time being: first of all, the build is disabled most of the time so you'll likely find an old version of WGSE-NG there. Second, it's less tested than the PyPI package. If you want to go ahead and try it anyway, see the <a href="#troubleshooting">troubleshooting</a> section.</p>
+<h3 id="development">Development</h3>
+<p>This section explain how to configure WGSE-NG for development.</p>
+<p><em>Note: The best experience for developing is with <a href="https://code.visualstudio.com/">VS Code</a> as this project already contains sensible settings for VS code.</em></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Debian based distros</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>git clone https://github.com/WGSE-NG/WGSE-NG
+<span class="k">cd</span> WGSE-NG
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install -e .
+wgse
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libqt6waylandclient6<span class="w"> </span>samtools<span class="w"> </span>bcftools<span class="w"> </span>-y
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/WGSE-NG/WGSE-NG
+<span class="nb">cd</span><span class="w"> </span>WGSE-NG
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>./.venv/bin/activate
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+wgse
+</code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="pre-commit">pre-commit</h4>
+<p>This repository uses <a href="https://pre-commit.com/#intro">pre-commit</a> to ensure linting, formatting, and isort are executed before commit.
+Its usage is optional but highly recommended. To install:
+<div class="highlight"><pre><span></span><code>python -m pip install pre-commit
+pre-commit install
+</code></pre></div></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Symbol lookup error</strong> after launching WGSE from command line on Linux/WSL</td>
+<td>It's likely you have an old version of Qt installed. On Debian based distro it's likely the version of <code>libqt6waylandclient6</code> or one of its dependencies is too old and the python module for Qt is trying to fetch some symbols from it that were added in a subsequent version. You can try to run a <code>sudo apt update &amp;&amp; sudo apt upgrade</code> but if that doesn't work unfortunately you need to upgrade the Qt version manually, use another distribution (or stick with the CLI once it will be available).</td>
+</tr>
+<tr>
+<td><strong>Something else does not work on Linux/WGSE-NG is not starting on Linux</strong></td>
+<td>WGSE-NG is tested almost exclusively on Windows for the time being. On Windows all the executables needed beside WGSE-NG are shipped with another PyPI package upon which WGSE-NG depends. Installing through <code>pip</code> is hence sufficient to get <code>wgse-ng</code> working. On Linux <code>wgse-ng</code> expects all the executables to be available under <code>PATH</code>. Consequently there are dependencies that need to be installed manually. The installation section provide the dependencies list for Debian-based distros, on other distros the command may change. Fetching existing executables from <code>PATH</code> means WGSE-NG will have no control no control over the version of the dependencies. Ubuntu on WLS is using a fairly old build of samtools for example. This means some feature (i.e., FASTA conversion) won't work. This will change in the future once WGSE-NG will stop relying on distro executables but frankly this is not a priority at the moment. You're anyway more than welcome to open an issue if something is not working correctly.</td>
+</tr>
+<tr>
+<td><strong>Windows defender is complaining a lot</strong> when launching the pyinstaller distribution, potentially uploading the .exe to the cloud for virus scanning or straight up detecting the binary as a malware</td>
+<td>Windows defender is not very happy with unsigned executables. You can rest assured WGSE-NG do not contain any malware though. WGSE-NG is completely open-source and the way the pyinstaller build is made can be seen in these GitHub Actions: <a href="https://github.com/WGSE-NG/WGSE-NG/blob/main/.github/workflows/python-pyinstaller-win.yml">Windows</a>, <a href="https://github.com/WGSE-NG/WGSE-NG/blob/main/.github/workflows/python-pyinstaller-linux.yml">Linux</a>. One of the long-term goal is to get a certificate and start signing the binary but this won't happen anytime soon.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration">Configuration</h2>
+<p>WGSE utilizes two configuration files to define its operational settings. These files provide a way to customize the software's behavior without modifying the code. The files are loaded in a specific order, allowing for overrides.</p>
+<h3 id="file-priority">File Priority</h3>
+<p>WGSE prioritizes configuration settings based on the order the files are loaded:</p>
+<ul>
+<li><strong>Global Configuration File</strong> (configuration/main.ini): The first file loaded is located in a subdirectory of the WGSE path. This file is named wgse.ini by default. Settings defined here serve as the base configuration. This file is mostly useful when developing to have everything in the same folder.</li>
+<li><strong>Local Configuration File</strong> (~/.wgse/main.ini): The second file loaded resides in the user's home directory within a folder named .wgse. Settings defined in this file can override the settings from the global configuration file.</li>
+</ul>
+<h3 id="configuration-file-sample">Configuration file sample</h3>
+<div class="highlight"><pre><span></span><code><span class="k">[general]</span>
+<span class="na">last_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">.</span>
+
+<span class="k">[external]</span>
+<span class="na">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3rd_party</span>
+<span class="na">threads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">24</span>
+
+<span class="k">[repository]</span>
+<span class="na">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">repository</span>
+<span class="na">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">repository\metadata</span>
+<span class="na">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">repository\temp</span>
+
+<span class="k">[alignment_stats]</span>
+<span class="na">skip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">40000</span>
+<span class="na">samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20000</span>
+</code></pre></div>
+<h2 id="faqs">FAQs</h2>
+<p><strong>Q: How does it differs from the original WGSE?</strong></p>
+<p>A: WGSE-NG is a re-engineering of WGSE with these improvements:</p>
+<ul>
+<li>A new GUI (based on pyqtside)</li>
+<li>An entirely re-written procedure to identify reference genomes that supports more than 90 reference genomes</li>
+<li>A progress bar (not an easy task to implement one, see <a href="advanced-topics/">here</a> for the technical details)</li>
+<li>A custom HTML export of file information</li>
+</ul>
+<p>It has also some non-visible modification:</p>
+<ul>
+<li>It has many unit-tests</li>
+<li>It has a completely automated crash-report</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>

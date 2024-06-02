@@ -7,7 +7,7 @@ WGSE-NG is an attempt to re-engineering an existing tool called [WGSE](https://w
 ### Launch
 WGSE runs on Windows and Linux. It should work also on MacOS but was never tested on it. Follow the installation procedure below according to your OS.
 The only currently supported way to install `WGSE-NG` is with a pypi package.
-This require python and pip installed. The procedure is the same on every supported OSs. Note WGSE-NG is still in alpha state and many things are not working or they may broke unexpectedly.
+This require python and pip installed. Note WGSE-NG is still in alpha state and many things are not working or they may broke unexpectedly.
 
 === "Windows"
     ```batch

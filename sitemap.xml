@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://DoubleHelix.github.io/</loc>
+         <loc>https://doublehelix.app/</loc>
          <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://DoubleHelix.github.io/API/</loc>
+         <loc>https://doublehelix.app/API/</loc>
          <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://DoubleHelix.github.io/advanced-topics/</loc>
+         <loc>https://doublehelix.app/advanced-topics/</loc>
          <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://DoubleHelix.github.io/user-guide/</loc>
+         <loc>https://doublehelix.app/user-guide/</loc>
          <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>

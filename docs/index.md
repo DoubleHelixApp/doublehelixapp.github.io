@@ -1,6 +1,6 @@
 # Welcome to DoubleHelix
 
-DoubleHelix is a tool designed for manipulating and extracting data from files representing whole-sequenced human genomes. It provides functionality to load, parse, filter, transform, and analyze genomic data. The name WGSE is an acronym that stands for "_Whole Genome Sequencing Extract_". 
+DoubleHelix is a tool designed for manipulating and extracting data from files representing whole-sequenced human genomes. It provides functionality to load, parse, filter, transform, and analyze genomic data.
 
 DoubleHelix is an attempt to re-engineering an existing tool called [WGSE](https://wgse.io). See the [FAQs](#faqs) to see how they differs. WGSE and DoubleHelix are heavily relying on a suite of existing tools called [samtools](https://samtools.github.io/) but they provide a more user-friendly interface.
 

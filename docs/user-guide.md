@@ -1,6 +1,6 @@
 # User guide
 
-This page explains the main window of WGSE-NG. Will add some screenshot when the UI will be more mature.
+This page explains the main window of DoubleHelix. Will add some screenshot when the UI will be more mature.
 
 ## Main UI
 
@@ -24,10 +24,10 @@ Alignment stats|Open a window containing information on alignment stats (see [al
 
 The reference field can have these values:
 
-- Available: WGSE-NG is able to recognize the reference genome used to align the loaded file and the file is on disk
-- Downloadable: WGSE-NG is able to recognize the reference genome used to align the file but the file is not on disk. WGSE-NG know its URL and the file can be downloaded.
-- Unknown: There is one or more sequences that WGSE-NG is not able to recognize. There's no way for WGSE-NG to obtain a reference genome and the user needs to tell WGSE-NG how to find it. See [ingestion](#ingestion)
-- Buildable: WGSE-NG is not able to find a single file that is a perfect match with the references that was used to align the loaded file, but WGSE-NG knows multiple files that can be used together to build a reference.
+- Available: DoubleHelix is able to recognize the reference genome used to align the loaded file and the file is on disk
+- Downloadable: DoubleHelix is able to recognize the reference genome used to align the file but the file is not on disk. DoubleHelix know its URL and the file can be downloaded.
+- Unknown: There is one or more sequences that DoubleHelix is not able to recognize. There's no way for DoubleHelix to obtain a reference genome and the user needs to tell DoubleHelix how to find it. See [ingestion](#ingestion)
+- Buildable: DoubleHelix is not able to find a single file that is a perfect match with the references that was used to align the loaded file, but DoubleHelix knows multiple files that can be used together to build a reference.
 
 The reference window can be opened by clicking on the "Reference" field in the main UI. It contains information about the reference genome used to align the file (if it is available) or information about similar reference genomes.
 

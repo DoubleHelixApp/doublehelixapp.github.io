@@ -1,5 +1,5 @@
-site_name: Documentation for WGSE-NG
-site_url: https://wgse-ng.github.io
+site_name: Documentation for DoubleHelix
+site_url: https://DoubleHelix.github.io
 theme:
   name: material
   palette: 
@@ -7,7 +7,7 @@ theme:
     primary: blue grey
     accent: light blue
   logo: logo.jpg
-repo_url: https://github.com/wgse-ng/wgse-ng
+repo_url: https://github.com/DoubleHelix/DoubleHelix
 markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:

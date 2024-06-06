@@ -2,14 +2,14 @@
 
 ## Reference genome
 
-In some cases, WGSE-NG needs to access the reference genome that was used to create an alignment-map file. Since this information is not contained in an alignment-map file, WGSE-NG needs to guess it. This document explains how WGSE-NG solves this problem and what can go wrong.
+In some cases, DoubleHelix needs to access the reference genome that was used to create an alignment-map file. Since this information is not contained in an alignment-map file, DoubleHelix needs to guess it. This document explains how DoubleHelix solves this problem and what can go wrong.
 
 ### Introduction
 The biggest hint for identifying the reference genome is the header of an alignment-map file. The header contains a list of sequences contained in the reference used to do the alignment.
 
-WGSE-NG solves the issue of identifying the reference by maintaining a list of meta-information about several reference genomes. In this way, it can identify a reference if it's present in this list. The list can be modified and new references can be suggested by using this [GitHub issue template](https://github.com/WGSE-NG/WGSE-NG/issues/new?assignees=chaplin89&labels=reference&projects=&template=add-a-new-reference.md&title=%5BReference%5D+Please+add+a+new+reference) or by submitting a PR using the instruction below.
+DoubleHelix solves the issue of identifying the reference by maintaining a list of meta-information about several reference genomes. In this way, it can identify a reference if it's present in this list. The list can be modified and new references can be suggested by using this [GitHub issue template](https://github.com/DoubleHelixApp/DoubleHelix/issues/new?assignees=chaplin89&labels=reference&projects=&template=add-a-new-reference.md&title=%5BReference%5D+Please+add+a+new+reference) or by submitting a PR using the instruction below.
 
-The process is not perfect and it can potentially give incorrect information (see the section below to understand how it works). In this case, some actions may fail. Please feel free to open a [bug report](https://github.com/WGSE-NG/WGSE-NG/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=) if that happens.
+The process is not perfect and it can potentially give incorrect information (see the section below to understand how it works). In this case, some actions may fail. Please feel free to open a [bug report](https://github.com/DoubleHelixApp/DoubleHelix/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=) if that happens.
 
 ### How it works
 
@@ -18,9 +18,9 @@ The identification can work in two different ways, depending on the information 
 - Using MD5 of sequences 
 - Using lengths of sequences
 
-MD5 indicates an MD5 string calculated in a reliable way (that accounts for case differences inside the sequence) over the content of a sequence. The procedure to calculate the MD5 is described on page 6 of the SAM standard. An MD5 can identify unequivocally a specific sequence and it's the preferred method to find a reference. If MD5 of the reference sequences are available it's easy to find the reference looking in the meta-data list of reference genomes that WGSE-NG maintains. Lengths are used only as a fallback when MD5s are not available. Unfortunately, this situation is the most common one. Despite MD5 sequences being part of the SAM specification standard they are not mandatory. Most alignment-map files won't have this field populated.
+MD5 indicates an MD5 string calculated in a reliable way (that accounts for case differences inside the sequence) over the content of a sequence. The procedure to calculate the MD5 is described on page 6 of the SAM standard. An MD5 can identify unequivocally a specific sequence and it's the preferred method to find a reference. If MD5 of the reference sequences are available it's easy to find the reference looking in the meta-data list of reference genomes that DoubleHelix maintains. Lengths are used only as a fallback when MD5s are not available. Unfortunately, this situation is the most common one. Despite MD5 sequences being part of the SAM specification standard they are not mandatory. Most alignment-map files won't have this field populated.
 
-The lengths indicate the length of the sequences expressed in base pairs. A length itself cannot reliably identify a sequence as it's possible (and happening in practices) to have the same lengths for sequences having completely different content (and hence a different MD5). What's more reliable is to use the whole set of sequences to identify a reference. The sequence of lengths contained in a reference is pretty unique for each reference, and it's the current way used by WGSE-NG to identify a reference when the MD5 is not available. It's still possible that two references have a perfectly identical set of lengths having a different sequence of MD5s. In this case, if the alignment-map file was associated by WGSE-NG to a reference falling in this situation, WGSE-NG will present a choice to the user. Since it's impossible to reliably determine which reference was used without other information, the user has to choose which reference is the correct one.
+The lengths indicate the length of the sequences expressed in base pairs. A length itself cannot reliably identify a sequence as it's possible (and happening in practices) to have the same lengths for sequences having completely different content (and hence a different MD5). What's more reliable is to use the whole set of sequences to identify a reference. The sequence of lengths contained in a reference is pretty unique for each reference, and it's the current way used by DoubleHelix to identify a reference when the MD5 is not available. It's still possible that two references have a perfectly identical set of lengths having a different sequence of MD5s. In this case, if the alignment-map file was associated by DoubleHelix to a reference falling in this situation, DoubleHelix will present a choice to the user. Since it's impossible to reliably determine which reference was used without other information, the user has to choose which reference is the correct one.
 
 This is a list of ambiguous lengths sequences (will be updated at  every commit)
 
@@ -33,7 +33,7 @@ This is a list of ambiguous lengths sequences (will be updated at  every commit)
 
 ### Add a new reference
 
-It's possible to onboard a new reference to WGSE-NG either by opening a GitHub issue with [this template](https://github.com/WGSE-NG/WGSE-NG/issues/new?assignees=chaplin89&labels=reference&projects=&template=add-a-new-reference.md&title=%5BReference%5D+Please+add+a+new+reference) or by using the following code:
+It's possible to onboard a new reference to DoubleHelix either by opening a GitHub issue with [this template](https://github.com/DoubleHelixApp/DoubleHelix/issues/new?assignees=chaplin89&labels=reference&projects=&template=add-a-new-reference.md&title=%5BReference%5D+Please+add+a+new+reference) or by using the following code:
 
 ```python
 manager = RepositoryManager()

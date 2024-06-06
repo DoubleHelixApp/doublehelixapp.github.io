@@ -1,2 +1,2 @@
-# wgse-ng.github.io
-Documentation for WGSE-NG project
+# DoubleHelix.github.io
+Documentation for DoubleHelix project

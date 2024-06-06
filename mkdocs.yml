@@ -1,5 +1,5 @@
 site_name: Documentation for DoubleHelix
-site_url: https://DoubleHelix.github.io
+site_url: https://doublehelix.app
 theme:
   name: material
   palette: 

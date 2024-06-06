@@ -15,7 +15,7 @@ This require python and pip installed. Note DoubleHelix is still in alpha state 
     wgse
     ```
 === "Debian-based distros"
-    **IMPORTANT**: DoubleHelix is not thoroughly on Linux. Please see the [troubleshooting](#troubleshooting) section.
+    **IMPORTANT**: DoubleHelix is not thoroughly tested on Linux. Please see the [troubleshooting](#troubleshooting) section.
     ```bash
     sudo apt install libqt6waylandclient6 samtools bcftools -y
     python -m pip install doublehelix

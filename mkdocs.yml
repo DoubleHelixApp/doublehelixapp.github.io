@@ -7,7 +7,7 @@ theme:
     primary: blue grey
     accent: light blue
   logo: logo.jpg
-repo_url: https://github.com/DoubleHelix/DoubleHelix
+repo_url: https://github.com/DoubleHelixApp/DoubleHelix
 markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:

@@ -109,10 +109,12 @@ A: DoubleHelix is a re-engineering of WGSE with these improvements:
 
 - A new GUI (based on pyqtside)
 - An entirely re-written procedure to identify reference genomes that supports more than 90 reference genomes
-- A progress bar (not an easy task to implement one, see [here](advanced-topics.md) for the technical details)
+- A progress bar (not an easy task to implement one, see [here](advanced-topics.md#progress-bar) for the technical details)
 - A custom HTML export of file information
+- A CLI (work in progress)
+- An easy and lightweight installation procedure
 
 It has also some non-visible modification:
 
-- It has many unit-tests
+- It's developed following best-practices and it has plenty of automated tests (60+ covering the 29% of the software at the moment, more to come)
 - It has a completely automated crash-report

@@ -12,7 +12,7 @@ This require python and pip installed. Note DoubleHelix is still in alpha state 
 === "Windows"
     ```batch
     python -m pip install doublehelix
-    wgse
+    helix
     ```
 === "Debian-based distros"
     > WARNING:
@@ -20,15 +20,15 @@ This require python and pip installed. Note DoubleHelix is still in alpha state 
     ```bash
     sudo apt install libqt6waylandclient6 samtools bcftools tabix -y
     python -m pip install doublehelix
-    wgse
+    helix
     ```
-=== `MacOS`
+=== "MacOS"
     > WARNING:
     > DoubleHelix is not thoroughly tested on MacOS. Please see the [troubleshooting](#troubleshooting) section.
     ```bash
     TBD
     python -m pip install doublehelix
-    wgse
+    helix
     ```
 
 #### PyInstaller release

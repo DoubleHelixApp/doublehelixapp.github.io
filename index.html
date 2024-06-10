@@ -299,15 +299,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#file-priority" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Priority
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#configuration-file-sample" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration file sample
@@ -492,15 +483,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#file-priority" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Priority
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#configuration-file-sample" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration file sample
@@ -543,9 +525,9 @@
 
 <h1 id="welcome-to-doublehelix">Welcome to DoubleHelix</h1>
 <p>DoubleHelix is a tool designed for manipulating and extracting data from files representing whole-sequenced human genomes. It provides functionality to load, parse, filter, transform, and analyze genomic data.</p>
-<p>DoubleHelix is an attempt to re-engineering an existing tool called <a href="https://wgse.io">WGSE</a>. See the <a href="#faqs">FAQs</a> to see how they differs. WGSE and DoubleHelix are heavily relying on a suite of existing tools called <a href="https://samtools.github.io/">samtools</a> but they provide a more user-friendly interface.</p>
+<p>DoubleHelix is providing a set of similar features to <a href="https://wgse.io">WGSE</a> but they are different products and they don't share any code. See the <a href="#faqs">FAQs</a> to see how they differs. DoubleHelix is heavily relying and provide a more user-friendly interface to a suite of existing tools called <a href="https://samtools.github.io/">samtools</a>.</p>
 <h3 id="launch">Launch</h3>
-<p>WGSE runs on Windows and Linux. It should work also on MacOS but was never tested on it. Follow the installation procedure below according to your OS.
+<p>DoubleHelix runs on Windows, Linux, and MacOS. Follow the installation procedure below according to your OS.
 The only currently supported way to install <code>DoubleHelix</code> is with a pypi package.
 This require python and pip installed. Note DoubleHelix is still in alpha state and many things are not working or they may broke unexpectedly.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Debian-based distros</label></div>
@@ -559,7 +541,7 @@ wgse
 <blockquote>
 <p>WARNING:
 DoubleHelix is not thoroughly tested on Linux. Please see the <a href="#troubleshooting">troubleshooting</a> section.
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libqt6waylandclient6<span class="w"> </span>samtools<span class="w"> </span>bcftools<span class="w"> </span>-y
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libqt6waylandclient6<span class="w"> </span>samtools<span class="w"> </span>bcftools<span class="w"> </span>tabix<span class="w"> </span>-y
 python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>doublehelix
 wgse
 </code></pre></div></p>
@@ -567,6 +549,13 @@ wgse
 </div>
 </div>
 </div>
+<p>=== <code>MacOS</code>
+    &gt; WARNING:
+    &gt; DoubleHelix is not thoroughly tested on MacOS. Please see the <a href="#troubleshooting">troubleshooting</a> section.
+    <div class="highlight"><pre><span></span><code>TBD
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>doublehelix
+wgse
+</code></pre></div></p>
 <h4 id="pyinstaller-release">PyInstaller release</h4>
 <p>There's a PyInstaller build the is occasionally executed to build a single-file binary.
 The artifacts are here: <a href="https://github.com/DoubleHelixApp/DoubleHelix/actions/workflows/python-pyinstaller-win.yml">windows</a>, <a href="https://github.com/DoubleHelixApp/DoubleHelix/actions/workflows/python-pyinstaller-linux.yml">linux</a>. To use them, simply download the file and open it.</p>
@@ -582,7 +571,7 @@ The artifacts are here: <a href="https://github.com/DoubleHelixApp/DoubleHelix/a
 python -m venv .venv
 .venv\Scripts\activate
 python -m pip install -e .
-wgse
+helix
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -592,7 +581,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Doubl
 python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 <span class="nb">source</span><span class="w"> </span>./.venv/bin/activate
 python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-wgse
+helix
 </code></pre></div>
 </div>
 </div>
@@ -613,7 +602,7 @@ pre-commit install
 </thead>
 <tbody>
 <tr>
-<td><strong>Symbol lookup error</strong> after launching WGSE from command line on Linux/WSL</td>
+<td><strong>Symbol lookup error</strong> after launching DoubleHelix from command line on Linux/WSL</td>
 <td>It's likely you have an old version of Qt installed. On Debian based distro it's likely the version of <code>libqt6waylandclient6</code> or one of its dependencies is too old and the python module for Qt is trying to fetch some symbols from it that were added in a subsequent version. You can try to run a <code>sudo apt update &amp;&amp; sudo apt upgrade</code> but if that doesn't work unfortunately you need to upgrade the Qt version manually, use another distribution (or stick with the CLI once it will be available).</td>
 </tr>
 <tr>
@@ -627,13 +616,8 @@ pre-commit install
 </tbody>
 </table>
 <h2 id="configuration">Configuration</h2>
-<p>WGSE utilizes two configuration files to define its operational settings. These files provide a way to customize the software's behavior without modifying the code. The files are loaded in a specific order, allowing for overrides.</p>
-<h3 id="file-priority">File Priority</h3>
-<p>WGSE prioritizes configuration settings based on the order the files are loaded:</p>
-<ul>
-<li><strong>Global Configuration File</strong> (configuration/main.ini): The first file loaded is located in a subdirectory of the WGSE path. This file is named wgse.ini by default. Settings defined here serve as the base configuration. This file is mostly useful when developing to have everything in the same folder.</li>
-<li><strong>Local Configuration File</strong> (~/.wgse/main.ini): The second file loaded resides in the user's home directory within a folder named .wgse. Settings defined in this file can override the settings from the global configuration file.</li>
-</ul>
+<p>DoubleHelix utilizes two configuration files to define its operational settings. These files provide a way to customize the software's behavior without modifying the code. </p>
+<p>The configuration file is localed in <code>~/.helix/main.ini</code>. it's created automatically during the first startup of the program and normally it doesn't need to be modified manually.</p>
 <h3 id="configuration-file-sample">Configuration file sample</h3>
 <div class="highlight"><pre><span></span><code><span class="k">[general]</span>
 <span class="na">last_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">.</span>
@@ -652,15 +636,15 @@ pre-commit install
 <span class="na">samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20000</span>
 </code></pre></div>
 <h2 id="faqs">FAQs</h2>
-<p><strong>Q: How does it differs from the original WGSE?</strong></p>
-<p>A: DoubleHelix is a re-engineering of WGSE with these improvements:</p>
+<p><strong>Q: How does it differs from WGSE?</strong></p>
+<p>A: DoubleHelix has these improvements over WGSE:</p>
 <ul>
-<li>A new GUI (based on pyqtside)</li>
+<li>A different GUI, based on pyqtside</li>
 <li>An entirely re-written procedure to identify reference genomes that supports more than 90 reference genomes</li>
 <li>A progress bar (not an easy task to implement one, see <a href="advanced-topics/#progress-bar">here</a> for the technical details)</li>
 <li>A custom HTML export of file information</li>
 <li>A CLI (work in progress)</li>
-<li>An easy and lightweight installation procedure</li>
+<li>An easy and lightweight installation procedure not based on cygwin/msys/scripts</li>
 </ul>
 <p>It has also some non-visible modification:</p>
 <ul>

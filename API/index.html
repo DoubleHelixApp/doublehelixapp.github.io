@@ -260,12 +260,81 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository--methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository--insert-docstring-explaining-methods-if-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert docstring explaining methods, if any.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.analyze_references" class="md-nav__link">
+    <span class="md-ellipsis">
+      analyze_references
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#helix.reference.repository_manager.Repository.download" class="md-nav__link">
     <span class="md-ellipsis">
       download
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.ingest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ingest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.self_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      self_test
     </span>
   </a>
   
@@ -352,12 +421,81 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository--methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository--insert-docstring-explaining-methods-if-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert docstring explaining methods, if any.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.analyze_references" class="md-nav__link">
+    <span class="md-ellipsis">
+      analyze_references
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#helix.reference.repository_manager.Repository.download" class="md-nav__link">
     <span class="md-ellipsis">
       download
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.ingest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ingest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.self_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      self_test
     </span>
   </a>
   
@@ -391,6 +529,30 @@
 <a id="helix.reference.repository_manager.Repository"></a>
     <div class="doc doc-contents first">
 
+
+      <p>The central repository class that holds all the necessary objects to perform
+various operations. This class encapsulates a set of functionalities that are
+related to biological data processing and manipulation.</p>
+<h3 id="helix.reference.repository_manager.Repository--attributes">Attributes</h3>
+<pre><code>* alignment_map_header: AlignmentMapHeader
+    - A header object representing an alignment map.
+* configuration: RepositoryConfig
+    - The repository's configuration settings.
+* decompressor: Decompressor
+    - An object for decompressing files.
+* downloader: Downloader
+    - A class used to download files from a remote location.
+* genome: Genome
+    - Represents the genomic data.
+* metadata_loader: MetadataLoader
+    - Used to load metadata about genomes and sequences.
+* mt_dna: MtDNA
+    - Handles mitochondrial DNA-related operations.
+* samtools: Samtools
+    - An object providing functions for manipulating SAM/BAM files.
+</code></pre>
+<h3 id="helix.reference.repository_manager.Repository--methods">Methods</h3>
+<h2 id="helix.reference.repository_manager.Repository--insert-docstring-explaining-methods-if-any">Insert docstring explaining methods, if any.</h2>
 
               <details class="quote">
                 <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
@@ -606,7 +768,95 @@
 <span class="normal">227</span>
 <span class="normal">228</span>
 <span class="normal">229</span>
-<span class="normal">230</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Repository</span><span class="p">:</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Repository</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The central repository class that holds all the necessary objects to perform</span>
+<span class="sd">    various operations. This class encapsulates a set of functionalities that are</span>
+<span class="sd">    related to biological data processing and manipulation.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">        * alignment_map_header: AlignmentMapHeader</span>
+<span class="sd">            - A header object representing an alignment map.</span>
+<span class="sd">        * configuration: RepositoryConfig</span>
+<span class="sd">            - The repository&#39;s configuration settings.</span>
+<span class="sd">        * decompressor: Decompressor</span>
+<span class="sd">            - An object for decompressing files.</span>
+<span class="sd">        * downloader: Downloader</span>
+<span class="sd">            - A class used to download files from a remote location.</span>
+<span class="sd">        * genome: Genome</span>
+<span class="sd">            - Represents the genomic data.</span>
+<span class="sd">        * metadata_loader: MetadataLoader</span>
+<span class="sd">            - Used to load metadata about genomes and sequences.</span>
+<span class="sd">        * mt_dna: MtDNA</span>
+<span class="sd">            - Handles mitochondrial DNA-related operations.</span>
+<span class="sd">        * samtools: Samtools</span>
+<span class="sd">            - An object providing functions for manipulating SAM/BAM files.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    # Insert docstring explaining methods, if any.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">loader</span><span class="p">:</span> <span class="n">MetadataLoader</span> <span class="o">=</span> <span class="n">MetadataLoader</span><span class="p">(),</span>
@@ -627,26 +877,29 @@
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
 
-    <span class="k">def</span> <span class="nf">analyze_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># TODO: This function is currently unused.</span>
-        <span class="c1"># Needs to be improved to provide some kind of</span>
-        <span class="c1"># useful info about supported references.</span>
-        <span class="c1"># As it is right now is garbage.</span>
+    <span class="k">def</span> <span class="nf">analyze_references</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Analyze the references in the repository and provide some basic information.</span>
 
+<span class="sd">        This method currently just prints out some statistics about the sequences.</span>
+<span class="sd">        It needs to be improved to provide more useful information about supported</span>
+<span class="sd">        references. For now, it&#39;s just a placeholder.</span>
+
+<span class="sd">        :return: None</span>
+<span class="sd">        :rtype: NoneType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Analyzing sequence by sequence</span>
         <span class="n">different_md5_same_length</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">ln</span><span class="p">,</span> <span class="n">seqs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="n">unique_seq</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">length</span><span class="p">,</span> <span class="n">seqs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">unique_seq_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
             <span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">seqs</span><span class="p">:</span>
-                <span class="n">unique_seq</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">md5</span><span class="p">)</span>
+                <span class="n">unique_seq_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">md5</span><span class="p">)</span>
                 <span class="n">name</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">name</span>
-            <span class="c1"># Filtering by an arbitrary value so that what&#39;s left are mostly</span>
-            <span class="c1"># normal chromosomes sequences.</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_seq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ln</span> <span class="o">&gt;</span> <span class="mi">57227414</span><span class="p">:</span>
-                <span class="n">different_md5_same_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_seq_set</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mi">57227414</span><span class="p">:</span>
+                <span class="n">different_md5_same_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
                 <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_seq</span><span class="p">)</span><span class="si">}</span><span class="s2"> different MD5 for length </span><span class="si">{</span><span class="n">ln</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">).&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_seq_set</span><span class="p">)</span><span class="si">}</span><span class="s2"> different MD5 for length </span><span class="si">{</span><span class="n">length</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">).&quot;</span>
                 <span class="p">)</span>
 
         <span class="c1"># Analyzing the whole genome, looking for identical length sequences</span>
@@ -667,13 +920,23 @@
         <span class="p">)</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">ambiguous</span><span class="si">}</span><span class="s2"> possible ambiguous sequences of lengths:&quot;</span><span class="p">)</span>
         <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">different_md5_same_length</span><span class="p">,</span> <span class="n">md5s</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">length</span><span class="p">,</span> <span class="n">md5s</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">md5s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">md5</span><span class="p">,</span> <span class="n">genome</span> <span class="ow">in</span> <span class="n">md5s</span><span class="p">:</span>
                     <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span><span class="si">!s}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequences</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Sequence</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Find the references that match the given sequence(s) based on their MD5</span>
+<span class="sd">        or length if an MD5 is not available.</span>
+
+<span class="sd">        This method returns a Reference object containing the matching sequences.</span>
+
+<span class="sd">        :param sequences: A list of Sequence objects to search for.</span>
+<span class="sd">        :return: A Reference object with the matching sequences.</span>
+<span class="sd">        :rtype: helix.reference.reference.Reference</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">md5_available</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">md5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
         <span class="n">matching</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="p">[])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
         <span class="k">if</span> <span class="n">md5_available</span><span class="p">:</span>
@@ -745,6 +1008,14 @@
             <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">: Dictionary file exists.&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">self_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Runs tests on the current reference data to ensure its integrity and consistency.</span>
+
+<span class="sd">        This method checks if all genomes have sequences by comparing the lengths of their</span>
+<span class="sd">        sequence lists with the number of sequences in their fasta files. If any genome is found</span>
+<span class="sd">        without sequences, it attempts to download the missing sequences from the original source.</span>
+
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">reference</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">reference</span><span class="o">.</span><span class="n">sequences</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">try</span><span class="p">:</span>
@@ -764,18 +1035,13 @@
 <span class="sd">        This Python function downloads, decompresses, compresses, and extracts sequence data from a</span>
 <span class="sd">        genome file, with optional progress tracking and force download capability.</span>
 
-<span class="sd">        :param genome: The `genome` parameter in the `download` method is an instance of the `Genome`</span>
-<span class="sd">        class. It represents the genome for which the download operation is being performed</span>
+<span class="sd">        :param genome: Represents the genome for which the download operation is being performed</span>
 <span class="sd">        :type genome: Genome</span>
-<span class="sd">        :param progress: The `progress` parameter in the `download` method is a callback function that</span>
-<span class="sd">        takes two arguments: a string indicating the progress message and an integer indicating the</span>
-<span class="sd">        progress percentage. This function is optional and can be used to provide progress updates</span>
-<span class="sd">        during the download process. If provided, the `progress` function will</span>
+<span class="sd">        :param progress: Callback function that takes two arguments: a string indicating the progress</span>
+<span class="sd">        message and an integer indicating the progress percentage.</span>
 <span class="sd">        :type progress: Callable[[str, int], None]</span>
-<span class="sd">        :param force: The `force` parameter in the `download` method is a boolean flag that determines</span>
-<span class="sd">        whether to overwrite existing files. If `force` is set to `True`, the method will delete any</span>
-<span class="sd">        existing files related to the genome being downloaded and re-download them. If `force` is set to</span>
-<span class="sd">        `False, defaults to False (optional)</span>
+<span class="sd">        :param force: Determines whether to overwrite existing files. If `force` is set to `True`, the</span>
+<span class="sd">        method will delete any existing files related to the genome being downloaded and re-download them.</span>
 <span class="sd">        :return: The `download` method returns the `genome` object after performing the download,</span>
 <span class="sd">        decompression, compression, and creation of companion files.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -806,14 +1072,24 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_create_companion_files</span><span class="p">(</span><span class="n">genome</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">genome</span>
 
-    <span class="k">def</span> <span class="nf">ingest</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">build</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span>
-    <span class="p">):</span>
-        <span class="n">genome</span> <span class="o">=</span> <span class="n">Genome</span><span class="p">(</span>
-            <span class="n">url</span><span class="p">,</span>
-            <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span>
-            <span class="n">build</span><span class="o">=</span><span class="n">build</span><span class="p">,</span>
-        <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">ingest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">build</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates a new Genome object and ingests the provided URL, source, and build information.</span>
+
+<span class="sd">        This method downloads, decompresses, compresses, and extracts sequence data from a</span>
+<span class="sd">        genome file, with optional progress tracking and force download capability. The created</span>
+<span class="sd">        Genome object is then returned.</span>
+
+<span class="sd">        :param url: The URL of the genome file</span>
+<span class="sd">        :type url: str</span>
+<span class="sd">        :param source: The source of the genome file</span>
+<span class="sd">        :type source: str</span>
+<span class="sd">        :param build: The build version of the genome file</span>
+<span class="sd">        :type build: str</span>
+<span class="sd">        :param force: Determines whether to overwrite existing files. If `force` is set to `True`, the</span>
+<span class="sd">        method will delete any existing files related to the genome being downloaded and re-download them.</span>
+<span class="sd">        :return: A new Genome object after performing the download, decompression, compression, and creation of companion files.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">genome</span> <span class="o">=</span> <span class="n">Genome</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">build</span><span class="o">=</span><span class="n">build</span><span class="p">)</span>
         <span class="n">genome</span><span class="o">.</span><span class="n">parent_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">genomes</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ingesting </span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
         <span class="n">genome</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
@@ -833,6 +1109,148 @@
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="helix.reference.repository_manager.Repository.analyze_references" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">analyze_references</span><span class="p">()</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Analyze the references in the repository and provide some basic information.</p>
+<p>This method currently just prints out some statistics about the sequences.
+It needs to be improved to provide more useful information about supported
+references. For now, it's just a placeholder.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>NoneType</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">analyze_references</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyze the references in the repository and provide some basic information.</span>
+
+<span class="sd">    This method currently just prints out some statistics about the sequences.</span>
+<span class="sd">    It needs to be improved to provide more useful information about supported</span>
+<span class="sd">    references. For now, it&#39;s just a placeholder.</span>
+
+<span class="sd">    :return: None</span>
+<span class="sd">    :rtype: NoneType</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Analyzing sequence by sequence</span>
+    <span class="n">different_md5_same_length</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">length</span><span class="p">,</span> <span class="n">seqs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">unique_seq_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">seqs</span><span class="p">:</span>
+            <span class="n">unique_seq_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">md5</span><span class="p">)</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_seq_set</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mi">57227414</span><span class="p">:</span>
+            <span class="n">different_md5_same_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_seq_set</span><span class="p">)</span><span class="si">}</span><span class="s2"> different MD5 for length </span><span class="si">{</span><span class="n">length</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">).&quot;</span>
+            <span class="p">)</span>
+
+    <span class="c1"># Analyzing the whole genome, looking for identical length sequences</span>
+    <span class="c1"># with different MD5 sequences</span>
+    <span class="n">different_md5s_same_lengths</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">genome</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">seq_lengths</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span><span class="p">])</span>
+        <span class="n">seq_md5</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">md5</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">seq_lengths</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="p">:</span>
+            <span class="n">different_md5s_same_lengths</span><span class="p">[</span><span class="n">seq_lengths</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">seq_md5</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="p">[</span><span class="n">seq_lengths</span><span class="p">]]:</span>
+            <span class="n">different_md5s_same_lengths</span><span class="p">[</span><span class="n">seq_lengths</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">seq_md5</span><span class="p">,</span> <span class="n">genome</span><span class="p">))</span>
+
+    <span class="n">ambiguous</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">ambiguous</span><span class="si">}</span><span class="s2"> possible ambiguous sequences of lengths:&quot;</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">length</span><span class="p">,</span> <span class="n">md5s</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">md5s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">md5</span><span class="p">,</span> <span class="n">genome</span> <span class="ow">in</span> <span class="n">md5s</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span><span class="si">!s}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
@@ -867,7 +1285,7 @@ genome file, with optional progress tracking and force download capability.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The <code>genome</code> parameter in the <code>download</code> method is an instance of the <code>Genome</code> class. It represents the genome for which the download operation is being performed</p>
+                <p>Represents the genome for which the download operation is being performed</p>
               </div>
             </td>
             <td>
@@ -881,7 +1299,7 @@ genome file, with optional progress tracking and force download capability.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The <code>progress</code> parameter in the <code>download</code> method is a callback function that takes two arguments: a string indicating the progress message and an integer indicating the progress percentage. This function is optional and can be used to provide progress updates during the download process. If provided, the <code>progress</code> function will</p>
+                <p>Callback function that takes two arguments: a string indicating the progress message and an integer indicating the progress percentage.</p>
               </div>
             </td>
             <td>
@@ -894,7 +1312,7 @@ genome file, with optional progress tracking and force download capability.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The <code>force</code> parameter in the <code>download</code> method is a boolean flag that determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the method will delete any existing files related to the genome being downloaded and re-download them. If <code>force</code> is set to `False, defaults to False (optional)</p>
+                <p>Determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the method will delete any existing files related to the genome being downloaded and re-download them.</p>
               </div>
             </td>
             <td>
@@ -928,72 +1346,62 @@ genome file, with optional progress tracking and force download capability.</p>
 
             <details class="quote">
               <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">download</span><span class="p">(</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">download</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span> <span class="n">genome</span><span class="p">:</span> <span class="n">Genome</span><span class="p">,</span> <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This Python function downloads, decompresses, compresses, and extracts sequence data from a</span>
 <span class="sd">    genome file, with optional progress tracking and force download capability.</span>
 
-<span class="sd">    :param genome: The `genome` parameter in the `download` method is an instance of the `Genome`</span>
-<span class="sd">    class. It represents the genome for which the download operation is being performed</span>
+<span class="sd">    :param genome: Represents the genome for which the download operation is being performed</span>
 <span class="sd">    :type genome: Genome</span>
-<span class="sd">    :param progress: The `progress` parameter in the `download` method is a callback function that</span>
-<span class="sd">    takes two arguments: a string indicating the progress message and an integer indicating the</span>
-<span class="sd">    progress percentage. This function is optional and can be used to provide progress updates</span>
-<span class="sd">    during the download process. If provided, the `progress` function will</span>
+<span class="sd">    :param progress: Callback function that takes two arguments: a string indicating the progress</span>
+<span class="sd">    message and an integer indicating the progress percentage.</span>
 <span class="sd">    :type progress: Callable[[str, int], None]</span>
-<span class="sd">    :param force: The `force` parameter in the `download` method is a boolean flag that determines</span>
-<span class="sd">    whether to overwrite existing files. If `force` is set to `True`, the method will delete any</span>
-<span class="sd">    existing files related to the genome being downloaded and re-download them. If `force` is set to</span>
-<span class="sd">    `False, defaults to False (optional)</span>
+<span class="sd">    :param force: Determines whether to overwrite existing files. If `force` is set to `True`, the</span>
+<span class="sd">    method will delete any existing files related to the genome being downloaded and re-download them.</span>
 <span class="sd">    :return: The `download` method returns the `genome` object after performing the download,</span>
 <span class="sd">    decompression, compression, and creation of companion files.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1023,6 +1431,370 @@ genome file, with optional progress tracking and force download capability.</p>
     <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;4/4: Creating companion files: </span><span class="si">{</span><span class="n">compressor_output</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_create_companion_files</span><span class="p">(</span><span class="n">genome</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">genome</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="helix.reference.repository_manager.Repository.find" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">find</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Find the references that match the given sequence(s) based on their MD5
+or length if an MD5 is not available.</p>
+<p>This method returns a Reference object containing the matching sequences.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>sequences</code></td>
+            <td>
+                  <code>list[<span title="helix.data.sequence.Sequence">Sequence</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of Sequence objects to search for.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>helix.reference.reference.Reference</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A Reference object with the matching sequences.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequences</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Sequence</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find the references that match the given sequence(s) based on their MD5</span>
+<span class="sd">    or length if an MD5 is not available.</span>
+
+<span class="sd">    This method returns a Reference object containing the matching sequences.</span>
+
+<span class="sd">    :param sequences: A list of Sequence objects to search for.</span>
+<span class="sd">    :return: A Reference object with the matching sequences.</span>
+<span class="sd">    :rtype: helix.reference.reference.Reference</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">md5_available</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">md5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
+    <span class="n">matching</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="p">[])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">md5_available</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">sequence</span><span class="o">.</span><span class="n">md5</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_md5</span><span class="p">:</span>
+                <span class="n">matching</span><span class="p">[</span><span class="n">sequence</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_md5</span><span class="p">[</span><span class="n">sequence</span><span class="o">.</span><span class="n">md5</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">sequence</span><span class="o">.</span><span class="n">length</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="p">:</span>
+                <span class="n">matching</span><span class="p">[</span><span class="n">sequence</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="p">[</span><span class="n">sequence</span><span class="o">.</span><span class="n">length</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">Reference</span><span class="p">(</span><span class="n">matching</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="helix.reference.repository_manager.Repository.ingest" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">ingest</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">build</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Creates a new Genome object and ingests the provided URL, source, and build information.</p>
+<p>This method downloads, decompresses, compresses, and extracts sequence data from a
+genome file, with optional progress tracking and force download capability. The created
+Genome object is then returned.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>url</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The URL of the genome file</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>source</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The source of the genome file</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>build</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The build version of the genome file</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force</code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the method will delete any existing files related to the genome being downloaded and re-download them.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A new Genome object after performing the download, decompression, compression, and creation of companion files.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ingest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">build</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a new Genome object and ingests the provided URL, source, and build information.</span>
+
+<span class="sd">    This method downloads, decompresses, compresses, and extracts sequence data from a</span>
+<span class="sd">    genome file, with optional progress tracking and force download capability. The created</span>
+<span class="sd">    Genome object is then returned.</span>
+
+<span class="sd">    :param url: The URL of the genome file</span>
+<span class="sd">    :type url: str</span>
+<span class="sd">    :param source: The source of the genome file</span>
+<span class="sd">    :type source: str</span>
+<span class="sd">    :param build: The build version of the genome file</span>
+<span class="sd">    :type build: str</span>
+<span class="sd">    :param force: Determines whether to overwrite existing files. If `force` is set to `True`, the</span>
+<span class="sd">    method will delete any existing files related to the genome being downloaded and re-download them.</span>
+<span class="sd">    :return: A new Genome object after performing the download, decompression, compression, and creation of companion files.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">genome</span> <span class="o">=</span> <span class="n">Genome</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">build</span><span class="o">=</span><span class="n">build</span><span class="p">)</span>
+    <span class="n">genome</span><span class="o">.</span><span class="n">parent_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">genomes</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ingesting </span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="n">genome</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
+    <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_sequences</span><span class="p">(</span><span class="n">genome</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">genome</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="helix.reference.repository_manager.Repository.self_test" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">self_test</span><span class="p">()</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Runs tests on the current reference data to ensure its integrity and consistency.</p>
+<p>This method checks if all genomes have sequences by comparing the lengths of their
+sequence lists with the number of sequences in their fasta files. If any genome is found
+without sequences, it attempts to download the missing sequences from the original source.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">self_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Runs tests on the current reference data to ensure its integrity and consistency.</span>
+
+<span class="sd">    This method checks if all genomes have sequences by comparing the lengths of their</span>
+<span class="sd">    sequence lists with the number of sequences in their fasta files. If any genome is found</span>
+<span class="sd">    without sequences, it attempts to download the missing sequences from the original source.</span>
+
+<span class="sd">    :return: None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">reference</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">reference</span><span class="o">.</span><span class="n">sequences</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">reference</span><span class="si">}</span><span class="s2"> as it has no sequences.&quot;</span><span class="p">)</span>
+                <span class="n">genome</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span>
+                    <span class="n">reference</span><span class="o">.</span><span class="n">fasta_url</span><span class="p">,</span> <span class="n">reference</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">reference</span><span class="o">.</span><span class="n">build</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">genome</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_loader</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>

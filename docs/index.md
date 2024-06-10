@@ -44,7 +44,7 @@ _Note: The best experience for developing is with [VS Code](https://code.visuals
     ```
 === "Debian based distros"
     ```bash
-    sudo apt install libqt6waylandclient6 samtools bcftools -y
+    sudo apt install libqt6waylandclient6 samtools bcftools tabix -y
     git clone https://github.com/DoubleHelixApp/DoubleHelix
     cd DoubleHelix
     python -m venv .venv

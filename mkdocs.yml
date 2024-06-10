@@ -7,6 +7,8 @@ theme:
     primary: blue grey
     accent: light blue
   logo: logo.jpg
+plugins:
+  - mkdocstrings
 repo_url: https://github.com/DoubleHelixApp/DoubleHelix
 markdown_extensions:
   - pymdownx.superfences

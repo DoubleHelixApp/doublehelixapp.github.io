@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -47,6 +47,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -118,43 +120,6 @@
     
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -252,6 +217,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -261,6 +237,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.download" class="md-nav__link">
+    <span class="md-ellipsis">
+      download
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -326,6 +339,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.reference.repository_manager.Repository.download" class="md-nav__link">
+    <span class="md-ellipsis">
+      download
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -343,6 +382,660 @@
 
 
 <h1 id="api">API</h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="helix.reference.repository_manager.Repository"></a>
+    <div class="doc doc-contents first">
+
+
+              <details class="quote">
+                <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Repository</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">loader</span><span class="p">:</span> <span class="n">MetadataLoader</span> <span class="o">=</span> <span class="n">MetadataLoader</span><span class="p">(),</span>
+        <span class="n">downloader</span><span class="p">:</span> <span class="n">Downloader</span> <span class="o">=</span> <span class="n">Downloader</span><span class="p">(),</span>
+        <span class="n">mtdna</span><span class="p">:</span> <span class="n">MtDNA</span> <span class="o">=</span> <span class="n">MtDNA</span><span class="p">(),</span>
+        <span class="n">config</span><span class="p">:</span> <span class="n">RepositoryConfig</span> <span class="o">=</span> <span class="n">RepositoryConfig</span><span class="p">(),</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loader</span> <span class="o">=</span> <span class="n">loader</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_downloader</span> <span class="o">=</span> <span class="n">downloader</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mtdna</span> <span class="o">=</span> <span class="n">mtdna</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">genomes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+        <span class="c1"># Index individual sequences by their MD5 and length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_md5</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">Sequence</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group_sequences</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">md5</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">genomes</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">Sequence</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group_sequences</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">genomes</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
+
+    <span class="k">def</span> <span class="nf">analyze_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># TODO: This function is currently unused.</span>
+        <span class="c1"># Needs to be improved to provide some kind of</span>
+        <span class="c1"># useful info about supported references.</span>
+        <span class="c1"># As it is right now is garbage.</span>
+
+        <span class="c1"># Analyzing sequence by sequence</span>
+        <span class="n">different_md5_same_length</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ln</span><span class="p">,</span> <span class="n">seqs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">unique_seq</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">seqs</span><span class="p">:</span>
+                <span class="n">unique_seq</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">md5</span><span class="p">)</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">name</span>
+            <span class="c1"># Filtering by an arbitrary value so that what&#39;s left are mostly</span>
+            <span class="c1"># normal chromosomes sequences.</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_seq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ln</span> <span class="o">&gt;</span> <span class="mi">57227414</span><span class="p">:</span>
+                <span class="n">different_md5_same_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_seq</span><span class="p">)</span><span class="si">}</span><span class="s2"> different MD5 for length </span><span class="si">{</span><span class="n">ln</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">).&quot;</span>
+                <span class="p">)</span>
+
+        <span class="c1"># Analyzing the whole genome, looking for identical length sequences</span>
+        <span class="c1"># with different MD5 sequences</span>
+        <span class="n">different_md5s_same_lengths</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">genome</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">seq_lengths</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span><span class="p">])</span>
+            <span class="n">seq_md5</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">md5</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">seq_lengths</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="p">:</span>
+                <span class="n">different_md5s_same_lengths</span><span class="p">[</span><span class="n">seq_lengths</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">if</span> <span class="n">seq_md5</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="p">[</span><span class="n">seq_lengths</span><span class="p">]]:</span>
+                <span class="n">different_md5s_same_lengths</span><span class="p">[</span><span class="n">seq_lengths</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">seq_md5</span><span class="p">,</span> <span class="n">genome</span><span class="p">))</span>
+
+        <span class="n">ambiguous</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">ambiguous</span><span class="si">}</span><span class="s2"> possible ambiguous sequences of lengths:&quot;</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">different_md5_same_length</span><span class="p">,</span> <span class="n">md5s</span> <span class="ow">in</span> <span class="n">different_md5s_same_lengths</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">md5s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">md5</span><span class="p">,</span> <span class="n">genome</span> <span class="ow">in</span> <span class="n">md5s</span><span class="p">:</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span><span class="si">!s}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequences</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Sequence</span><span class="p">]):</span>
+        <span class="n">md5_available</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">md5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
+        <span class="n">matching</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="p">[])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">md5_available</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">sequence</span><span class="o">.</span><span class="n">md5</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_md5</span><span class="p">:</span>
+                    <span class="n">matching</span><span class="p">[</span><span class="n">sequence</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_md5</span><span class="p">[</span><span class="n">sequence</span><span class="o">.</span><span class="n">md5</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">sequence</span><span class="o">.</span><span class="n">length</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="p">:</span>
+                    <span class="n">matching</span><span class="p">[</span><span class="n">sequence</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequences_by_length</span><span class="p">[</span><span class="n">sequence</span><span class="o">.</span><span class="n">length</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">Reference</span><span class="p">(</span><span class="n">matching</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_group_sequences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">criteria</span><span class="p">,</span> <span class="n">genomes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Genome</span><span class="p">]):</span>
+        <span class="n">grouped</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">genome</span> <span class="ow">in</span> <span class="n">genomes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span><span class="p">:</span>
+                <span class="n">evaluated_criteria</span> <span class="o">=</span> <span class="n">criteria</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">evaluated_criteria</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">grouped</span><span class="p">:</span>
+                    <span class="n">grouped</span><span class="p">[</span><span class="n">evaluated_criteria</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">grouped</span><span class="p">[</span><span class="n">evaluated_criteria</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">grouped</span>
+
+    <span class="k">def</span> <span class="nf">_get_sizes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genome</span><span class="p">:</span> <span class="n">Genome</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">fai_url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fai_url</span> <span class="o">=</span> <span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span> <span class="o">+</span> <span class="s2">&quot;.fai&quot;</span>
+            <span class="n">fai_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_downloader</span><span class="o">.</span><span class="n">get_file_size</span><span class="p">(</span><span class="n">fai_url</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">fai_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">genome</span><span class="o">.</span><span class="n">fai_url</span> <span class="o">=</span> <span class="n">fai_url</span>
+
+        <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">gzi_url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">gzi_url</span> <span class="o">=</span> <span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span> <span class="o">+</span> <span class="s2">&quot;.gzi&quot;</span>
+            <span class="n">gzi_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_downloader</span><span class="o">.</span><span class="n">get_file_size</span><span class="p">(</span><span class="n">gzi_url</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">gzi_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">genome</span><span class="o">.</span><span class="n">gzi_url</span> <span class="o">=</span> <span class="n">gzi_url</span>
+
+        <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">download_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_downloader</span><span class="o">.</span><span class="n">get_file_size</span><span class="p">(</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">genome</span><span class="o">.</span><span class="n">download_size</span> <span class="o">=</span> <span class="n">size</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Unable to get the size of the fasta file for </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_sequences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genome</span><span class="p">:</span> <span class="n">Genome</span><span class="p">):</span>
+        <span class="n">dictionary</span><span class="p">:</span> <span class="n">AlignmentMapHeader</span> <span class="o">=</span> <span class="n">AlignmentMapHeader</span><span class="o">.</span><span class="n">load_from_file</span><span class="p">(</span><span class="n">genome</span><span class="o">.</span><span class="n">dict</span><span class="p">)</span>
+        <span class="n">sequences</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">sequences</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">entry</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">entry</span><span class="o">.</span><span class="n">md5</span><span class="p">)</span>
+            <span class="n">sequences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sequences</span>
+
+    <span class="k">def</span> <span class="nf">_create_companion_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genome</span><span class="p">:</span> <span class="n">Genome</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">samtools</span> <span class="o">=</span> <span class="n">Samtools</span><span class="p">()</span>
+        <span class="n">bgzip</span> <span class="o">=</span> <span class="n">BGzip</span><span class="p">()</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">: Starting post-download tasks.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">genome</span><span class="o">.</span><span class="n">gzi</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">: Generating bgzip index.&quot;</span><span class="p">)</span>
+            <span class="n">bgzip</span><span class="o">.</span><span class="n">bgzip_wrapper</span><span class="p">(</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="p">,</span> <span class="n">genome</span><span class="o">.</span><span class="n">gzi</span><span class="p">,</span> <span class="n">BgzipAction</span><span class="o">.</span><span class="n">Reindex</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">: bgzip index exists.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">genome</span><span class="o">.</span><span class="n">dict</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">: Generating dictionary file.&quot;</span><span class="p">)</span>
+            <span class="n">samtools</span><span class="o">.</span><span class="n">make_dictionary</span><span class="p">(</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="p">,</span> <span class="n">genome</span><span class="o">.</span><span class="n">dict</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">: Dictionary file exists.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">self_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">reference</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">reference</span><span class="o">.</span><span class="n">sequences</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">reference</span><span class="si">}</span><span class="s2"> as it has no sequences.&quot;</span><span class="p">)</span>
+                    <span class="n">genome</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span>
+                        <span class="n">reference</span><span class="o">.</span><span class="n">fasta_url</span><span class="p">,</span> <span class="n">reference</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">reference</span><span class="o">.</span><span class="n">build</span>
+                    <span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">genome</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_loader</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">genome</span><span class="p">:</span> <span class="n">Genome</span><span class="p">,</span> <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This Python function downloads, decompresses, compresses, and extracts sequence data from a</span>
+<span class="sd">        genome file, with optional progress tracking and force download capability.</span>
+
+<span class="sd">        :param genome: The `genome` parameter in the `download` method is an instance of the `Genome`</span>
+<span class="sd">        class. It represents the genome for which the download operation is being performed</span>
+<span class="sd">        :type genome: Genome</span>
+<span class="sd">        :param progress: The `progress` parameter in the `download` method is a callback function that</span>
+<span class="sd">        takes two arguments: a string indicating the progress message and an integer indicating the</span>
+<span class="sd">        progress percentage. This function is optional and can be used to provide progress updates</span>
+<span class="sd">        during the download process. If provided, the `progress` function will</span>
+<span class="sd">        :type progress: Callable[[str, int], None]</span>
+<span class="sd">        :param force: The `force` parameter in the `download` method is a boolean flag that determines</span>
+<span class="sd">        whether to overwrite existing files. If `force` is set to `True`, the method will delete any</span>
+<span class="sd">        existing files related to the genome being downloaded and re-download them. If `force` is set to</span>
+<span class="sd">        `False, defaults to False (optional)</span>
+<span class="sd">        :return: The `download` method returns the `genome` object after performing the download,</span>
+<span class="sd">        decompression, compression, and creation of companion files.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">downloader</span> <span class="o">=</span> <span class="n">Downloader</span><span class="p">()</span>
+        <span class="n">decompressor</span> <span class="o">=</span> <span class="n">Decompressor</span><span class="p">()</span>
+        <span class="n">compressor</span> <span class="o">=</span> <span class="n">BGzip</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> already exist. Re-using it.&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_create_companion_files</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">genome</span>
+        <span class="k">elif</span> <span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="n">force</span><span class="p">:</span>
+            <span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+            <span class="n">genome</span><span class="o">.</span><span class="n">bgzip_md5</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">genome</span><span class="o">.</span><span class="n">downloaded_md5</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">genome</span><span class="o">.</span><span class="n">decompressed_md5</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">genome</span><span class="o">.</span><span class="n">bgzip_size</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">genome</span><span class="o">.</span><span class="n">download_size</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">genome</span><span class="o">.</span><span class="n">decompressed_size</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1/4: Downloading fasta from: </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="n">download_output</span> <span class="o">=</span> <span class="n">downloader</span><span class="o">.</span><span class="n">perform</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">progress</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2/4: Decompressing: </span><span class="si">{</span><span class="n">download_output</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="n">decompressor_output</span> <span class="o">=</span> <span class="n">decompressor</span><span class="o">.</span><span class="n">perform</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">download_output</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;3/4: Compressing to gzip: </span><span class="si">{</span><span class="n">decompressor_output</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="n">compressor_output</span> <span class="o">=</span> <span class="n">compressor</span><span class="o">.</span><span class="n">perform</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">decompressor_output</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;4/4: Creating companion files: </span><span class="si">{</span><span class="n">compressor_output</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_companion_files</span><span class="p">(</span><span class="n">genome</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">genome</span>
+
+    <span class="k">def</span> <span class="nf">ingest</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">build</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">):</span>
+        <span class="n">genome</span> <span class="o">=</span> <span class="n">Genome</span><span class="p">(</span>
+            <span class="n">url</span><span class="p">,</span>
+            <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span>
+            <span class="n">build</span><span class="o">=</span><span class="n">build</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">parent_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">genomes</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ingesting </span><span class="si">{</span><span class="n">genome</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="n">genome</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">sequences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_sequences</span><span class="p">(</span><span class="n">genome</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">genome</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="helix.reference.repository_manager.Repository.download" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">download</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>This Python function downloads, decompresses, compresses, and extracts sequence data from a
+genome file, with optional progress tracking and force download capability.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>genome</code></td>
+            <td>
+                  <code><span title="helix.data.genome.Genome">Genome</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The <code>genome</code> parameter in the <code>download</code> method is an instance of the <code>Genome</code> class. It represents the genome for which the download operation is being performed</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>progress</code></td>
+            <td>
+                  <code><span title="typing.Callable">Callable</span>[[str, int], None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The <code>progress</code> parameter in the <code>download</code> method is a callback function that takes two arguments: a string indicating the progress message and an integer indicating the progress percentage. This function is optional and can be used to provide progress updates during the download process. If provided, the <code>progress</code> function will</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force</code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The <code>force</code> parameter in the <code>download</code> method is a boolean flag that determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the method will delete any existing files related to the genome being downloaded and re-download them. If <code>force</code> is set to `False, defaults to False (optional)</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The <code>download</code> method returns the <code>genome</code> object after performing the download, decompression, compression, and creation of companion files.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">download</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">genome</span><span class="p">:</span> <span class="n">Genome</span><span class="p">,</span> <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This Python function downloads, decompresses, compresses, and extracts sequence data from a</span>
+<span class="sd">    genome file, with optional progress tracking and force download capability.</span>
+
+<span class="sd">    :param genome: The `genome` parameter in the `download` method is an instance of the `Genome`</span>
+<span class="sd">    class. It represents the genome for which the download operation is being performed</span>
+<span class="sd">    :type genome: Genome</span>
+<span class="sd">    :param progress: The `progress` parameter in the `download` method is a callback function that</span>
+<span class="sd">    takes two arguments: a string indicating the progress message and an integer indicating the</span>
+<span class="sd">    progress percentage. This function is optional and can be used to provide progress updates</span>
+<span class="sd">    during the download process. If provided, the `progress` function will</span>
+<span class="sd">    :type progress: Callable[[str, int], None]</span>
+<span class="sd">    :param force: The `force` parameter in the `download` method is a boolean flag that determines</span>
+<span class="sd">    whether to overwrite existing files. If `force` is set to `True`, the method will delete any</span>
+<span class="sd">    existing files related to the genome being downloaded and re-download them. If `force` is set to</span>
+<span class="sd">    `False, defaults to False (optional)</span>
+<span class="sd">    :return: The `download` method returns the `genome` object after performing the download,</span>
+<span class="sd">    decompression, compression, and creation of companion files.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">downloader</span> <span class="o">=</span> <span class="n">Downloader</span><span class="p">()</span>
+    <span class="n">decompressor</span> <span class="o">=</span> <span class="n">Decompressor</span><span class="p">()</span>
+    <span class="n">compressor</span> <span class="o">=</span> <span class="n">BGzip</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> already exist. Re-using it.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_companion_files</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">genome</span>
+    <span class="k">elif</span> <span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="n">force</span><span class="p">:</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">fasta</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">bgzip_md5</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">downloaded_md5</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">decompressed_md5</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">bgzip_size</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">download_size</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">genome</span><span class="o">.</span><span class="n">decompressed_size</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1/4: Downloading fasta from: </span><span class="si">{</span><span class="n">genome</span><span class="o">.</span><span class="n">fasta_url</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="n">download_output</span> <span class="o">=</span> <span class="n">downloader</span><span class="o">.</span><span class="n">perform</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">progress</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2/4: Decompressing: </span><span class="si">{</span><span class="n">download_output</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="n">decompressor_output</span> <span class="o">=</span> <span class="n">decompressor</span><span class="o">.</span><span class="n">perform</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">download_output</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;3/4: Compressing to gzip: </span><span class="si">{</span><span class="n">decompressor_output</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="n">compressor_output</span> <span class="o">=</span> <span class="n">compressor</span><span class="o">.</span><span class="n">perform</span><span class="p">(</span><span class="n">genome</span><span class="p">,</span> <span class="n">decompressor_output</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;4/4: Creating companion files: </span><span class="si">{</span><span class="n">compressor_output</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_create_companion_files</span><span class="p">(</span><span class="n">genome</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">genome</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 
@@ -392,7 +1085,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

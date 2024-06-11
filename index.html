@@ -586,11 +586,9 @@ The artifacts are here: <a href="https://github.com/DoubleHelixApp/DoubleHelix/a
 <h3 id="development">Development</h3>
 <p>This section explains how to configure DoubleHelix for development.</p>
 <p><em>Note: The best experience for developing is with <a href="https://code.visualstudio.com/">VS Code</a> as this project already contains sensible settings for VS code.</em></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Debian-based distros</label><label for="__tabbed_2_3">MacOS</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>git clone https://github.com/DoubleHelixApp/DoubleHelix
 <span class="k">cd</span> DoubleHelix
 python -m venv .venv
@@ -598,11 +596,8 @@ python -m venv .venv
 python -m pip install -e .
 helix
 </code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Debian-based distros</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libqt6waylandclient6<span class="w"> </span>samtools<span class="w"> </span>bcftools<span class="w"> </span>tabix<span class="w"> </span>-y
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DoubleHelixApp/DoubleHelix
 <span class="nb">cd</span><span class="w"> </span>DoubleHelix
@@ -611,6 +606,13 @@ python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </s
 python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 helix
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>TBD.
+</code></pre></div>
+</div>
+</div>
+</div>
 <h4 id="pre-commit">pre-commit</h4>
 <p>This repository uses <a href="https://pre-commit.com/#intro">pre-commit</a> to ensure linting, formatting, and isort are executed before committing.
 Its usage is optional but highly recommended. To install:

@@ -43,24 +43,28 @@ This section explains how to configure DoubleHelix for development.
 _Note: The best experience for developing is with [VS Code](https://code.visualstudio.com/) as this project already contains sensible settings for VS code._
 
 === "Windows"
- ```batch
- git clone https://github.com/DoubleHelixApp/DoubleHelix
- cd DoubleHelix
- python -m venv .venv
- .venv\Scripts\activate
- python -m pip install -e .
- helix
- ```
+    ```batch
+    git clone https://github.com/DoubleHelixApp/DoubleHelix
+    cd DoubleHelix
+    python -m venv .venv
+    .venv\Scripts\activate
+    python -m pip install -e .
+    helix
+    ```
 === "Debian-based distros"
- ```bash
- sudo apt install libqt6waylandclient6 samtools bcftools tabix -y
- git clone https://github.com/DoubleHelixApp/DoubleHelix
- cd DoubleHelix
- python -m venv .venv
- source ./.venv/bin/activate
- python -m pip install -e .
- helix
- ```
+    ```bash
+    sudo apt install libqt6waylandclient6 samtools bcftools tabix -y
+    git clone https://github.com/DoubleHelixApp/DoubleHelix
+    cd DoubleHelix
+    python -m venv .venv
+    source ./.venv/bin/activate
+    python -m pip install -e .
+    helix
+    ```
+=== "MacOS"
+    ```
+    TBD.
+    ```
 
 #### pre-commit
 This repository uses [pre-commit](https://pre-commit.com/#intro) to ensure linting, formatting, and isort are executed before committing.

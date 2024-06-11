@@ -349,6 +349,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#unitprefix-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      UnitPrefix class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.utility.unit_prefix.UnitPrefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      UnitPrefix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.utility.unit_prefix.UnitPrefix.convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      convert
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.utility.unit_prefix.UnitPrefix.convert_bytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      convert_bytes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -514,6 +550,42 @@
   <a href="#helix.reference.repository_manager.Repository.self_test" class="md-nav__link">
     <span class="md-ellipsis">
       self_test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unitprefix-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      UnitPrefix class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.utility.unit_prefix.UnitPrefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      UnitPrefix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.utility.unit_prefix.UnitPrefix.convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      convert
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helix.utility.unit_prefix.UnitPrefix.convert_bytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      convert_bytes
     </span>
   </a>
   
@@ -1144,29 +1216,8 @@ related to biological data processing and manipulation.</p>
 <p>This method currently just prints out some statistics about the sequences.
 It needs to be improved to provide more useful information about supported
 references. For now, it's just a placeholder.</p>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code>NoneType</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>None</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+<p>:return: None
+:rtype: NoneType</p>
 
             <details class="quote">
               <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
@@ -1284,84 +1335,15 @@ references. For now, it's just a placeholder.</p>
 
       <p>This Python function downloads, decompresses, compresses, and extracts sequence data from a
 genome file, with optional progress tracking and force download capability.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code>genome</code></td>
-            <td>
-                  <code><span title="helix.data.genome.Genome">Genome</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Represents the genome for which the download operation is being performed</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>progress</code></td>
-            <td>
-                  <code><span title="typing.Callable">Callable</span>[[str, int], None]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Callback function that takes two arguments: a string indicating the progress message and an integer indicating the progress percentage.</p>
-              </div>
-            </td>
-            <td>
-                  <code>None</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>force</code></td>
-            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the method will delete any existing files related to the genome being downloaded and re-download them.</p>
-              </div>
-            </td>
-            <td>
-                  <code>False</code>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The <code>download</code> method returns the <code>genome</code> object after performing the download, decompression, compression, and creation of companion files.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+<p>:param genome: Represents the genome for which the download operation is being performed
+:type genome: Genome
+:param progress: Callback function that takes two arguments: a string indicating the progress
+message and an integer indicating the progress percentage.
+:type progress: Callable[[str, int], None]
+:param force: Determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the
+method will delete any existing files related to the genome being downloaded and re-download them.
+:return: The <code>download</code> method returns the <code>genome</code> object after performing the download,
+decompression, compression, and creation of companion files.</p>
 
             <details class="quote">
               <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
@@ -1470,58 +1452,9 @@ genome file, with optional progress tracking and force download capability.</p>
       <p>Find the references that match the given sequence(s) based on their MD5
 or length if an MD5 is not available.</p>
 <p>This method returns a Reference object containing the matching sequences.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code>sequences</code></td>
-            <td>
-                  <code>list[<span title="helix.data.sequence.Sequence">Sequence</span>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A list of Sequence objects to search for.</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code>helix.reference.reference.Reference</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A Reference object with the matching sequences.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+<p>:param sequences: A list of Sequence objects to search for.
+:return: A Reference object with the matching sequences.
+:rtype: helix.reference.reference.Reference</p>
 
             <details class="quote">
               <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
@@ -1589,98 +1522,15 @@ or length if an MD5 is not available.</p>
 <p>This method downloads, decompresses, compresses, and extracts sequence data from a
 genome file, with optional progress tracking and force download capability. The created
 Genome object is then returned.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code>url</code></td>
-            <td>
-                  <code>str</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The URL of the genome file</p>
-              </div>
-            </td>
-            <td>
-                  <code>None</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>source</code></td>
-            <td>
-                  <code>str</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The source of the genome file</p>
-              </div>
-            </td>
-            <td>
-                  <code>None</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>build</code></td>
-            <td>
-                  <code>str</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The build version of the genome file</p>
-              </div>
-            </td>
-            <td>
-                  <code>None</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>force</code></td>
-            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the method will delete any existing files related to the genome being downloaded and re-download them.</p>
-              </div>
-            </td>
-            <td>
-                  <code>False</code>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A new Genome object after performing the download, decompression, compression, and creation of companion files.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+<p>:param url: The URL of the genome file
+:type url: str
+:param source: The source of the genome file
+:type source: str
+:param build: The build version of the genome file
+:type build: str
+:param force: Determines whether to overwrite existing files. If <code>force</code> is set to <code>True</code>, the
+method will delete any existing files related to the genome being downloaded and re-download them.
+:return: A new Genome object after performing the download, decompression, compression, and creation of companion files.</p>
 
             <details class="quote">
               <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
@@ -1750,28 +1600,7 @@ Genome object is then returned.</p>
 <p>This method checks if all genomes have sequences by comparing the lengths of their
 sequence lists with the number of sequences in their fasta files. If any genome is found
 without sequences, it attempts to download the missing sequences from the original source.</p>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>None</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+<p>:return: None</p>
 
             <details class="quote">
               <summary>Source code in <code>helix\reference\repository_manager.py</code></summary>
@@ -1814,6 +1643,754 @@ without sequences, it attempts to download the missing sequences from the origin
                 <span class="bp">self</span><span class="o">.</span><span class="n">_loader</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genomes</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><h2 id="unitprefix-class">UnitPrefix class</h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="helix.utility.unit_prefix.UnitPrefix"></a>
+    <div class="doc doc-contents first">
+
+
+      <p>Convert a quantity into a more readable form using unit prefixes.</p>
+<p>This class is expecially useful for very big or very small number, that
+are difficult to read or visualize.</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">UnitPrefix</span><span class="o">.</span><span class="n">convert_bytes</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="go">&#39;1 kB&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">UnitPrefix</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="go">&#39;1 k&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">UnitPrefix</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">&#39;10 m&#39;</span>
+</code></pre></div>
+
+              <details class="quote">
+                <summary>Source code in <code>helix\utility\unit_prefix.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">UnitPrefix</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a quantity into a more readable form using unit prefixes.</span>
+
+<span class="sd">    This class is expecially useful for very big or very small number, that</span>
+<span class="sd">    are difficult to read or visualize.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; UnitPrefix.convert_bytes(1024)</span>
+<span class="sd">        &#39;1 kB&#39;</span>
+<span class="sd">        &gt;&gt;&gt; UnitPrefix.convert(1000)</span>
+<span class="sd">        &#39;1 k&#39;</span>
+<span class="sd">        &gt;&gt;&gt; UnitPrefix.convert(0.01)</span>
+<span class="sd">        &#39;10 m&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">convert_bytes</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">decimal</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert bytes using binary prefixes.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input (int): The number to convert.</span>
+<span class="sd">            decimal (int, optional): Number of decimals to use. Defaults to 2.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: The input number is a float</span>
+<span class="sd">            ValueError: The input number is negative.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Converted number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">input</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t convert a fractional number of bytes&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">input</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t convert a negative number of bytes&quot;</span><span class="p">)</span>
+        <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">si_prefixes</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot; B&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; kB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; MB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; GB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; TB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">40</span><span class="p">)),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">input</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;0 B&quot;</span>
+
+        <span class="n">input_log</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">input_log</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">input_log</span><span class="p">))</span>
+
+        <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">si_prefixes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">min_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">max_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">max_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span>
+            <span class="k">elif</span> <span class="n">min_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span> <span class="ow">and</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+
+            <span class="k">if</span> <span class="n">in_interval</span><span class="p">:</span>
+                <span class="n">converted</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="nb">input</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="o">**</span><span class="n">interval</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="si">:</span><span class="s2">.</span><span class="si">{</span><span class="n">decimal</span><span class="si">}</span><span class="s2">f</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="c1"># Not interested in any .0000 at the end</span>
+                <span class="n">converted</span> <span class="o">=</span> <span class="n">converted</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+                <span class="c1"># If converted == &quot;0&quot; will become &quot;&quot;</span>
+                <span class="k">if</span> <span class="n">converted</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">converted</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+                <span class="n">converted</span> <span class="o">+=</span> <span class="n">letter</span>
+                <span class="k">break</span>
+        <span class="k">return</span> <span class="n">converted</span>
+
+    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">decimal</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert a quantity using metric prefixes.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input (int): The number to convert.</span>
+<span class="sd">            decimal (int, optional): Number of decimals to use. Defaults to 2.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Converted number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">si_prefixes</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot; p&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; n&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; μ&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; m&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; k&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; M&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; G&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; T&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s2">&quot; P&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">15</span><span class="p">)),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">input</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;0&quot;</span>
+
+        <span class="n">input_log</span> <span class="o">=</span> <span class="n">log10</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+        <span class="c1"># i.e., -3.9 should become -4;</span>
+        <span class="c1">#        3.9 should become 4</span>
+        <span class="k">if</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">input_log</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">input_log</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">input_log</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="n">input_log</span><span class="p">))</span>
+
+        <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">si_prefixes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">min_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">max_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">max_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span>
+            <span class="k">elif</span> <span class="n">min_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span> <span class="ow">and</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+
+            <span class="k">if</span> <span class="n">in_interval</span><span class="p">:</span>
+                <span class="n">converted</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="nb">input</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="o">**</span><span class="n">interval</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="si">:</span><span class="s2">.</span><span class="si">{</span><span class="n">decimal</span><span class="si">}</span><span class="s2">f</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="c1"># Not interested in any .0000 at the end</span>
+                <span class="n">converted</span> <span class="o">=</span> <span class="n">converted</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+                <span class="c1"># If converted == &quot;0&quot; will become &quot;&quot;</span>
+                <span class="k">if</span> <span class="n">converted</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">converted</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+                <span class="n">converted</span> <span class="o">+=</span> <span class="n">letter</span>
+                <span class="k">break</span>
+        <span class="k">return</span> <span class="n">converted</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="helix.utility.unit_prefix.UnitPrefix.convert" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">convert</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">decimal</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Convert a quantity using metric prefixes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>input</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number to convert.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>decimal</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of decimals to use. Defaults to 2.</p>
+              </div>
+            </td>
+            <td>
+                  <code>2</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Converted number.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>helix\utility\unit_prefix.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">decimal</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a quantity using metric prefixes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input (int): The number to convert.</span>
+<span class="sd">        decimal (int, optional): Number of decimals to use. Defaults to 2.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Converted number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">si_prefixes</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot; p&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; n&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; μ&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; m&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; k&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; M&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; G&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; T&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; P&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">15</span><span class="p">)),</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">input</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;0&quot;</span>
+
+    <span class="n">input_log</span> <span class="o">=</span> <span class="n">log10</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+    <span class="c1"># i.e., -3.9 should become -4;</span>
+    <span class="c1">#        3.9 should become 4</span>
+    <span class="k">if</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">input_log</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">input_log</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">input_log</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="n">input_log</span><span class="p">))</span>
+
+    <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">si_prefixes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">min_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">max_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">in_interval</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">max_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span>
+        <span class="k">elif</span> <span class="n">min_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span> <span class="ow">and</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+
+        <span class="k">if</span> <span class="n">in_interval</span><span class="p">:</span>
+            <span class="n">converted</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="nb">input</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="o">**</span><span class="n">interval</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="si">:</span><span class="s2">.</span><span class="si">{</span><span class="n">decimal</span><span class="si">}</span><span class="s2">f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="c1"># Not interested in any .0000 at the end</span>
+            <span class="n">converted</span> <span class="o">=</span> <span class="n">converted</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="c1"># If converted == &quot;0&quot; will become &quot;&quot;</span>
+            <span class="k">if</span> <span class="n">converted</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="n">converted</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+            <span class="n">converted</span> <span class="o">+=</span> <span class="n">letter</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">converted</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="helix.utility.unit_prefix.UnitPrefix.convert_bytes" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">convert_bytes</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">decimal</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Convert bytes using binary prefixes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>input</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number to convert.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>decimal</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of decimals to use. Defaults to 2.</p>
+              </div>
+            </td>
+            <td>
+                  <code>2</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>ValueError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The input number is a float</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code>ValueError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The input number is negative.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Converted number.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>helix\utility\unit_prefix.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">convert_bytes</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">decimal</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert bytes using binary prefixes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input (int): The number to convert.</span>
+<span class="sd">        decimal (int, optional): Number of decimals to use. Defaults to 2.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: The input number is a float</span>
+<span class="sd">        ValueError: The input number is negative.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Converted number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">input</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t convert a fractional number of bytes&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">input</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t convert a negative number of bytes&quot;</span><span class="p">)</span>
+    <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">si_prefixes</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot; B&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; kB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; MB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; GB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot; TB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">40</span><span class="p">)),</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">input</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;0 B&quot;</span>
+
+    <span class="n">input_log</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">input_log</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">input_log</span><span class="p">))</span>
+
+    <span class="n">converted</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">si_prefixes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">min_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">max_interval</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">in_interval</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">max_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span>
+        <span class="k">elif</span> <span class="n">min_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">in_interval</span> <span class="o">=</span> <span class="n">input_log</span> <span class="o">&gt;=</span> <span class="n">min_interval</span> <span class="ow">and</span> <span class="n">input_log</span> <span class="o">&lt;</span> <span class="n">max_interval</span>
+
+        <span class="k">if</span> <span class="n">in_interval</span><span class="p">:</span>
+            <span class="n">converted</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="nb">input</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="o">**</span><span class="n">interval</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="si">:</span><span class="s2">.</span><span class="si">{</span><span class="n">decimal</span><span class="si">}</span><span class="s2">f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="c1"># Not interested in any .0000 at the end</span>
+            <span class="n">converted</span> <span class="o">=</span> <span class="n">converted</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="c1"># If converted == &quot;0&quot; will become &quot;&quot;</span>
+            <span class="k">if</span> <span class="n">converted</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="n">converted</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+            <span class="n">converted</span> <span class="o">+=</span> <span class="n">letter</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">converted</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>

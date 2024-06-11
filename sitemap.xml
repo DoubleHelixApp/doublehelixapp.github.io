@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://doublehelix.app/glossary/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://doublehelix.app/user-guide/</loc>
          <lastmod>2024-06-11</lastmod>
          <changefreq>daily</changefreq>

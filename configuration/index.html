@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://doublehelix.app/user-guide/">
+        <link rel="canonical" href="https://doublehelix.app/configuration/">
       
       
-        <link rel="prev" href="../glossary/">
+        <link rel="prev" href="../advanced-topics/">
       
+      
+        <link rel="next" href="../glossary/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>User guide - Documentation for DoubleHelix</title>
+        <title>Data folder - Documentation for DoubleHelix</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#user-guide" class="md-skip">
+        <a href="#data-folder" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User guide
+              Data folder
             
           </span>
         </div>
@@ -243,10 +245,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data folder
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -255,6 +277,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration file sample
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -283,30 +349,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    User guide
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -315,35 +361,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#main-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main UI
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -375,11 +392,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#main-ui" class="md-nav__link">
+  <a href="#configuration-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Main UI
+      Configuration file
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration file sample
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -401,90 +433,32 @@
   
 
 
-<h1 id="user-guide">User guide</h1>
-<p>This page explains the main window of DoubleHelix. Will add some screenshot when the UI will be more mature.</p>
-<h2 id="main-ui">Main UI</h2>
-<p>Once opened, you can drag the file you want to open into the UI. A table with basic information about the file will open.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Directory</td>
-<td>Directory that contains the file that is loaded in the app. Double click the field to open the directory in a file manager (if available).</td>
-</tr>
-<tr>
-<td>File</td>
-<td>Name of the file loaded</td>
-</tr>
-<tr>
-<td>File Type</td>
-<td>See <a href="#file-type">file type</a></td>
-</tr>
-<tr>
-<td>Reference</td>
-<td>See <a href="#reference">reference</a>. Double click to open a window containing information about similar or identical reference genomes.</td>
-</tr>
-<tr>
-<td>Gender</td>
-<td>Biological gender of the person who sampled the DNA contained in the loaded file. The field it's available only if index stats are available.</td>
-</tr>
-<tr>
-<td>Sorted</td>
-<td>Indicates whether the file is sorted (add explanation here)</td>
-</tr>
-<tr>
-<td>Indexed</td>
-<td>Indicates whether the loaded file has an index file (a .bai or .crai file depending on the format)</td>
-</tr>
-<tr>
-<td>Mitochondrial DNA Model</td>
-<td>Gapped reference genomes contains are based on known models for the mitochondrial DNA. If the model of the reference associated with the loaded file is known it will be specified here.</td>
-</tr>
-<tr>
-<td>Header</td>
-<td>Open a window containing information on the header (see <a href="#header">header</a>)</td>
-</tr>
-<tr>
-<td>Alignment stats</td>
-<td>Open a window containing information on alignment stats (see <a href="#alignment-stats">alignemnt stats</a>)</td>
-</tr>
-</tbody>
-</table>
-<h1 id="reference">Reference</h1>
-<p>The reference field can have these values:</p>
-<ul>
-<li>Available: DoubleHelix is able to recognize the reference genome used to align the loaded file and the file is on disk</li>
-<li>Downloadable: DoubleHelix is able to recognize the reference genome used to align the file but the file is not on disk. DoubleHelix know its URL and the file can be downloaded.</li>
-<li>Unknown: There is one or more sequences that DoubleHelix is not able to recognize. There's no way for DoubleHelix to obtain a reference genome and the user needs to tell DoubleHelix how to find it. See <a href="#ingestion">ingestion</a></li>
-<li>Buildable: DoubleHelix is not able to find a single file that is a perfect match with the references that was used to align the loaded file, but DoubleHelix knows multiple files that can be used together to build a reference.</li>
-</ul>
-<p>The reference window can be opened by clicking on the "Reference" field in the main UI. It contains information about the reference genome used to align the file (if it is available) or information about similar reference genomes.</p>
-<p>Every column in the reference window are related to a specific reference that has some information matching with the reference used to align the file.</p>
-<h2 id="header">Header</h2>
-<p>Header window can be opened by clicking on the "Header" field in the Main UI. It contains a 1:1 representation of the information contained in the header of the loaded file.</p>
-<h3 id="sequences">Sequences</h3>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fillme</td>
-<td>Fillme</td>
-</tr>
-</tbody>
-</table>
-<h3 id="programs">Programs</h3>
-<h3 id="read-groups">Read groups</h3>
-<h3 id="comments">Comments</h3>
+<h1 id="data-folder">Data folder</h1>
+<p>The data folder is located in the user's home directory, <code>~/.helix</code> on Linux and <code>C:\Users\&lt;username&gt;\.helix</code> on Windows.</p>
+<p>It contains three subfolders: <code>genomes</code>, <code>logs</code>, and <code>temp</code>:
+- <em>genomes</em>: contains reference genome data downloaded from the internet.
+- <em>logs</em>: contains log files generated by the program. Please make sure to attach these logs when reporting an issue.
+- <em>temp</em>: contains temporary files used during the execution of the program. It's safe to delete it when the program is closed. Features to auto-cleanup this folder will be added in the future.</p>
+<h2 id="configuration-file">Configuration file</h2>
+<p>DoubleHelix utilizes a configuration file to define its operational settings. These files provide a way to customize the software's behavior without modifying the code.</p>
+<p>The configuration file is located in <code>main.ini</code> under the data folder. It's created automatically during the first startup of the program and normally it doesn't need to be modified manually.</p>
+<h3 id="configuration-file-sample">Configuration file sample</h3>
+<div class="highlight"><pre><span></span><code><span class="k">[general]</span>
+<span class="na">last_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">.</span>
+
+<span class="k">[external]</span>
+<span class="na">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3rd_party</span>
+<span class="na">threads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">24</span>
+
+<span class="k">[repository]</span>
+<span class="na">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">repository</span>
+<span class="na">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">repository\metadata</span>
+<span class="na">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">repository\temp</span>
+
+<span class="k">[alignment_stats]</span>
+<span class="na">skip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">40000</span>
+<span class="na">samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20000</span>
+</code></pre></div>
 
 
 

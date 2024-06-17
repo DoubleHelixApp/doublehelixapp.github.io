@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://doublehelix.app/</loc>
-         <lastmod>2024-06-12</lastmod>
+         <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://doublehelix.app/API/</loc>
-         <lastmod>2024-06-12</lastmod>
+         <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://doublehelix.app/advanced-topics/</loc>
-         <lastmod>2024-06-12</lastmod>
+         <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://doublehelix.app/configuration/</loc>
-         <lastmod>2024-06-12</lastmod>
+         <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://doublehelix.app/glossary/</loc>
-         <lastmod>2024-06-12</lastmod>
+         <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://doublehelix.app/user-guide/</loc>
-         <lastmod>2024-06-12</lastmod>
+         <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -88,7 +88,7 @@ A: In terms of features, DoubleHelix was inspired by WGSE but their similarities
 
 | Feature | DoubleHelix | WGSE |
 |:---:|:---:|:---:|
-| GUI | Tkinter | PyQtSide6 |
+| GUI | PyQtSide6 | Tkinter |
 | Reference genome | Able to recognize more than 90 reference genomes. It can scale easily. | Supports a limited number. It cannot scale. |
 | Progress bar | [Yes](advanced-topics.md#progress-bar) | No |
 | HTML Export | Yes | No |

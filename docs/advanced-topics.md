@@ -52,4 +52,14 @@ A GUI/CLI way will be added in the future.
 
 ## Progress bar
 
-TBD
+To provide a friendlier interface, DoubleHelix shows a progress bar while doing long operations. Implementing a progress bar for DoubleHelix required a considerable effort, as DoubleHelix is reliant on dependencies who doesn't allow to monitor their progress in any way.
+
+In these cases, the approach DoubleHelix is following is to estimate how many bytes will the process needs to read or write and constantly polling the current amount of bytes processed to understand where the process is. Is not easy to estimate this info in some cases, and in general the process is quite hacky, meaning it can break easily (giving incorrect ETA or percentage) after advancing the version of these dependencies. Some classes to abstract this behaviour are making this process as painless as possible.
+
+The architecture like this: ProcessIOMonitor -> BaseProgressCalculator -> UI Callback
+
+All these classes are in the `helix.progress` namespace:
+
+- *helix.progress.ProcessIOMonitor*: will start a process and preiodically calling a callback, supplying [`io_counters`](https://psutil.readthedocs.io/en/latest/#psutil.disk_io_counters) (i.e., read/write bytes from the process).
+- *helix.progress.BaseProcessCalculator*: Implements the callback for the class above. `BaseProgressCalculator` knows what's the target to reach and convert the bytes supplied by `ProcessIOMonitor` into a percentage and an ETA. It implements all the features needed to have stable values.
+- *helix.progress.FileIOMonitor*: Is the equivalent of ProcessIOMonitor but it monitors read or write bytes on a file, not on the process itself. Sometime is simply more practical to monitor the growth of a file, as a process may not exists (i.e., the file is generate by another 3rd party python module that does not provide any way to monitor the progress). It provides an interface that is similar to `ProcessIOMonitor`.

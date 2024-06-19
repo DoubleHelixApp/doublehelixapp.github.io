@@ -299,15 +299,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#helix.alignment_map.variant_caller.VariantCaller.__init__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __init__
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#helix.alignment_map.variant_caller.VariantCaller.call" class="md-nav__link">
     <span class="md-ellipsis">
       call
@@ -560,15 +551,6 @@
   <a href="#helix.alignment_map.variant_caller.VariantCaller" class="md-nav__link">
     <span class="md-ellipsis">
       VariantCaller
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#helix.alignment_map.variant_caller.VariantCaller.__init__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __init__
     </span>
   </a>
   
@@ -1434,6 +1416,155 @@ are difficult to read or visualize.</p>
 
       <p>This class is responsible for calling variants in a given alignment file.</p>
 
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>input</code></td>
+            <td>
+                  <code><span title="helix.alignment_map.alignment_map_file.AlignmentMapFile">AlignmentMapFile</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>File that contains aligned reads.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>calling_type</code></td>
+            <td>
+                  <code><span title="helix.alignment_map.variant_caller.VariantCallingType">VariantCallingType</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Type of variant calling to perform. Defaults to VariantCallingType.Both.</p>
+              </div>
+            </td>
+            <td>
+                  <code><span title="helix.alignment_map.variant_caller.VariantCallingType.Both">Both</span></code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>repo_config</code></td>
+            <td>
+                  <code><span title="helix.configuration.RepositoryConfig">RepositoryConfig</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Configuration for reference genome repository. Defaults to
+MANAGER_CFG.REPOSITORY.</p>
+              </div>
+            </td>
+            <td>
+                  <code><span title="helix.configuration.MANAGER_CFG.REPOSITORY">REPOSITORY</span></code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ext_config</code></td>
+            <td>
+                  <code><span title="helix.configuration.ExternalConfig">ExternalConfig</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Configuration for external tools. Defaults to MANAGER_CFG.EXTERNAL.</p>
+              </div>
+            </td>
+            <td>
+                  <code><span title="helix.configuration.MANAGER_CFG.EXTERNAL">EXTERNAL</span></code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>external</code></td>
+            <td>
+                  <code><span title="helix.utility.external.External">External</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Object that contains functions to call external tools.
+Defaults to External().</p>
+              </div>
+            </td>
+            <td>
+                  <code><span title="helix.utility.external.External">External</span>()</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>progress</code></td>
+            <td>
+                  <code>Callable[[str, int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Function that accept a status message and a percentage,
+for progress tracking. Defaults to None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>logger</code></td>
+            <td>
+                  <code>Logger</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Logger object. Defaults to logging.getLogger(<strong>name</strong>).</p>
+              </div>
+            </td>
+            <td>
+                  <code><span title="logging.getLogger">getLogger</span>(__name__)</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>RuntimeError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the index stats inside <code>input</code> are not available.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code>RuntimeError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the reference genome for <code>input</code> is not available.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
               <details class="quote">
                 <summary>Source code in <code>helix\alignment_map\variant_caller.py</code></summary>
                 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
@@ -1598,7 +1729,33 @@ are difficult to read or visualize.</p>
 <span class="normal">180</span>
 <span class="normal">181</span>
 <span class="normal">182</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">VariantCaller</span><span class="p">(</span><span class="n">SimpleWorker</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class is responsible for calling variants in a given alignment file.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class is responsible for calling variants in a given alignment file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input (AlignmentMapFile):</span>
+<span class="sd">            File that contains aligned reads.</span>
+<span class="sd">        calling_type (VariantCallingType, optional):</span>
+<span class="sd">            Type of variant calling to perform. Defaults to VariantCallingType.Both.</span>
+<span class="sd">        repo_config (RepositoryConfig, optional):</span>
+<span class="sd">            Configuration for reference genome repository. Defaults to</span>
+<span class="sd">            MANAGER_CFG.REPOSITORY.</span>
+<span class="sd">        ext_config (ExternalConfig, optional):</span>
+<span class="sd">            Configuration for external tools. Defaults to MANAGER_CFG.EXTERNAL.</span>
+<span class="sd">        external (External, optional):</span>
+<span class="sd">            Object that contains functions to call external tools.</span>
+<span class="sd">            Defaults to External().</span>
+<span class="sd">        progress (Callable[[str, int], optional):</span>
+<span class="sd">            Function that accept a status message and a percentage,</span>
+<span class="sd">            for progress tracking. Defaults to None.</span>
+<span class="sd">        logger (Logger, optional):</span>
+<span class="sd">            Logger object. Defaults to logging.getLogger(__name__).</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        RuntimeError:</span>
+<span class="sd">            If the index stats inside `input` are not available.</span>
+<span class="sd">        RuntimeError:</span>
+<span class="sd">            If the reference genome for `input` is not available.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -1610,33 +1767,7 @@ are difficult to read or visualize.</p>
         <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">logger</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">),</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the class.</span>
 
-<span class="sd">        Args:</span>
-<span class="sd">            input (AlignmentMapFile):</span>
-<span class="sd">                File that contains aligned reads.</span>
-<span class="sd">            calling_type (VariantCallingType, optional):</span>
-<span class="sd">                Type of variant calling to perform. Defaults to VariantCallingType.Both.</span>
-<span class="sd">            repo_config (RepositoryConfig, optional):</span>
-<span class="sd">                Configuration for reference genome repository. Defaults to</span>
-<span class="sd">                MANAGER_CFG.REPOSITORY.</span>
-<span class="sd">            ext_config (ExternalConfig, optional):</span>
-<span class="sd">                Configuration for external tools. Defaults to MANAGER_CFG.EXTERNAL.</span>
-<span class="sd">            external (External, optional):</span>
-<span class="sd">                Object that contains functions to call external tools.</span>
-<span class="sd">                Defaults to External().</span>
-<span class="sd">            progress (Callable[[str, int], optional):</span>
-<span class="sd">                Function that accept a status message and a percentage,</span>
-<span class="sd">                for progress tracking. Defaults to None.</span>
-<span class="sd">            logger (Logger, optional):</span>
-<span class="sd">                Logger object. Defaults to logging.getLogger(__name__).</span>
-
-<span class="sd">        Raises:</span>
-<span class="sd">            RuntimeError:</span>
-<span class="sd">                If the index stats inside `input` are not available.</span>
-<span class="sd">            RuntimeError:</span>
-<span class="sd">                If the reference genome for `input` is not available.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_external</span> <span class="o">=</span> <span class="n">external</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ext_config</span> <span class="o">=</span> <span class="n">ext_config</span>
@@ -1773,281 +1904,6 @@ are difficult to read or visualize.</p>
 
 
 
-
-<div class="doc doc-object doc-function">
-
-
-<h2 id="helix.alignment_map.variant_caller.VariantCaller.__init__" class="doc doc-heading">
-            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">calling_type</span><span class="o">=</span><span class="n">VariantCallingType</span><span class="o">.</span><span class="n">Both</span><span class="p">,</span> <span class="n">repo_config</span><span class="o">=</span><span class="n">MANAGER_CFG</span><span class="o">.</span><span class="n">REPOSITORY</span><span class="p">,</span> <span class="n">ext_config</span><span class="o">=</span><span class="n">MANAGER_CFG</span><span class="o">.</span><span class="n">EXTERNAL</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="n">External</span><span class="p">(),</span> <span class="n">progress</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">))</span></code>
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Initialize the class.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code>input</code></td>
-            <td>
-                  <code><span title="helix.alignment_map.alignment_map_file.AlignmentMapFile">AlignmentMapFile</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>File that contains aligned reads.</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>calling_type</code></td>
-            <td>
-                  <code><span title="helix.alignment_map.variant_caller.VariantCallingType">VariantCallingType</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Type of variant calling to perform. Defaults to VariantCallingType.Both.</p>
-              </div>
-            </td>
-            <td>
-                  <code><span title="helix.alignment_map.variant_caller.VariantCallingType.Both">Both</span></code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>repo_config</code></td>
-            <td>
-                  <code><span title="helix.configuration.RepositoryConfig">RepositoryConfig</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Configuration for reference genome repository. Defaults to
-MANAGER_CFG.REPOSITORY.</p>
-              </div>
-            </td>
-            <td>
-                  <code><span title="helix.configuration.MANAGER_CFG.REPOSITORY">REPOSITORY</span></code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>ext_config</code></td>
-            <td>
-                  <code><span title="helix.configuration.ExternalConfig">ExternalConfig</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Configuration for external tools. Defaults to MANAGER_CFG.EXTERNAL.</p>
-              </div>
-            </td>
-            <td>
-                  <code><span title="helix.configuration.MANAGER_CFG.EXTERNAL">EXTERNAL</span></code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>external</code></td>
-            <td>
-                  <code><span title="helix.utility.external.External">External</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Object that contains functions to call external tools.
-Defaults to External().</p>
-              </div>
-            </td>
-            <td>
-                  <code><span title="helix.utility.external.External">External</span>()</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>progress</code></td>
-            <td>
-                  <code>Callable[[str, int]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Function that accept a status message and a percentage,
-for progress tracking. Defaults to None.</p>
-              </div>
-            </td>
-            <td>
-                  <code>None</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>logger</code></td>
-            <td>
-                  <code>Logger</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Logger object. Defaults to logging.getLogger(<strong>name</strong>).</p>
-              </div>
-            </td>
-            <td>
-                  <code><span title="logging.getLogger">getLogger</span>(__name__)</code>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-<p><span class="doc-section-title">Raises:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code>RuntimeError</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>If the index stats inside <code>input</code> are not available.</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                  <code>RuntimeError</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>If the reference genome for <code>input</code> is not available.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-            <details class="quote">
-              <summary>Source code in <code>helix\alignment_map\variant_caller.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span>
-    <span class="nb">input</span><span class="p">:</span> <span class="n">AlignmentMapFile</span><span class="p">,</span>
-    <span class="n">calling_type</span><span class="p">:</span> <span class="n">VariantCallingType</span> <span class="o">=</span> <span class="n">VariantCallingType</span><span class="o">.</span><span class="n">Both</span><span class="p">,</span>
-    <span class="n">repo_config</span><span class="p">:</span> <span class="n">RepositoryConfig</span> <span class="o">=</span> <span class="n">MANAGER_CFG</span><span class="o">.</span><span class="n">REPOSITORY</span><span class="p">,</span>
-    <span class="n">ext_config</span><span class="p">:</span> <span class="n">ExternalConfig</span> <span class="o">=</span> <span class="n">MANAGER_CFG</span><span class="o">.</span><span class="n">EXTERNAL</span><span class="p">,</span>
-    <span class="n">external</span><span class="p">:</span> <span class="n">External</span> <span class="o">=</span> <span class="n">External</span><span class="p">(),</span>
-    <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">logger</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">),</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the class.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        input (AlignmentMapFile):</span>
-<span class="sd">            File that contains aligned reads.</span>
-<span class="sd">        calling_type (VariantCallingType, optional):</span>
-<span class="sd">            Type of variant calling to perform. Defaults to VariantCallingType.Both.</span>
-<span class="sd">        repo_config (RepositoryConfig, optional):</span>
-<span class="sd">            Configuration for reference genome repository. Defaults to</span>
-<span class="sd">            MANAGER_CFG.REPOSITORY.</span>
-<span class="sd">        ext_config (ExternalConfig, optional):</span>
-<span class="sd">            Configuration for external tools. Defaults to MANAGER_CFG.EXTERNAL.</span>
-<span class="sd">        external (External, optional):</span>
-<span class="sd">            Object that contains functions to call external tools.</span>
-<span class="sd">            Defaults to External().</span>
-<span class="sd">        progress (Callable[[str, int], optional):</span>
-<span class="sd">            Function that accept a status message and a percentage,</span>
-<span class="sd">            for progress tracking. Defaults to None.</span>
-<span class="sd">        logger (Logger, optional):</span>
-<span class="sd">            Logger object. Defaults to logging.getLogger(__name__).</span>
-
-<span class="sd">    Raises:</span>
-<span class="sd">        RuntimeError:</span>
-<span class="sd">            If the index stats inside `input` are not available.</span>
-<span class="sd">        RuntimeError:</span>
-<span class="sd">            If the reference genome for `input` is not available.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_external</span> <span class="o">=</span> <span class="n">external</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_ext_config</span> <span class="o">=</span> <span class="n">ext_config</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_ploidy</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">repo_config</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;ploidy.txt&quot;</span><span class="p">))</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_is_quitting</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_quitting_ack</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_current_operation</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span> <span class="o">=</span> <span class="n">progress</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span> <span class="o">=</span> <span class="n">logger</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_input_file</span> <span class="o">=</span> <span class="nb">input</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_calling_type</span> <span class="o">=</span> <span class="n">calling_type</span>
-
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_file</span><span class="o">.</span><span class="n">file_info</span><span class="o">.</span><span class="n">index_stats</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Index stats cannot be None for variant calling&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_file</span><span class="o">.</span><span class="n">file_info</span><span class="o">.</span><span class="n">reference_genome</span><span class="o">.</span><span class="n">ready_reference</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Reference cannot be None for variant calling&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-            </details>
-    </div>
-
-</div>
 
 <div class="doc doc-object doc-function">
 
@@ -2332,6 +2188,11 @@ for progress tracking. Defaults to None.</p>
     <div class="doc doc-contents first">
 
 
+      <p>Gets the type of a file trying to not relying on its extension (if possible)</p>
+<p>This class uses the utility <code>htsfile</code> to get the type of a file. If it fails to
+get the type of a file using <code>htsfile</code>, it will try to guess its type based on its
+extension.</p>
+
               <details class="quote">
                 <summary>Source code in <code>helix\files\file_type_checker.py</code></summary>
                 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
@@ -2396,7 +2257,19 @@ for progress tracking. Defaults to None.</p>
 <span class="normal">77</span>
 <span class="normal">78</span>
 <span class="normal">79</span>
-<span class="normal">80</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">FileTypeChecker</span><span class="p">:</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">FileTypeChecker</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gets the type of a file trying to not relying on its extension (if possible)</span>
+
+<span class="sd">    This class uses the utility `htsfile` to get the type of a file. If it fails to</span>
+<span class="sd">    get the type of a file using `htsfile`, it will try to guess its type based on its</span>
+<span class="sd">    extension.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_EXT_TO_TYPE</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;.7z&quot;</span><span class="p">:</span> <span class="n">FileType</span><span class="o">.</span><span class="n">SEVENZIP</span><span class="p">,</span>
@@ -2541,13 +2414,7 @@ for progress tracking. Defaults to None.</p>
 
             <details class="quote">
               <summary>Source code in <code>helix\files\file_type_checker.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
 <span class="normal">59</span>
@@ -2564,7 +2431,13 @@ for progress tracking. Defaults to None.</p>
 <span class="normal">70</span>
 <span class="normal">71</span>
 <span class="normal">72</span>
-<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileType</span><span class="p">:</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileType</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get a Type starting from a file path.</span>
 
 <span class="sd">    Args:</span>
@@ -2612,89 +2485,106 @@ for progress tracking. Defaults to None.</p>
 
               <details class="quote">
                 <summary>Source code in <code>helix\naming\converter.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Converter</span><span class="p">:</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Converter</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">canonicalize</span><span class="p">(</span><span class="n">sequence_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert a sequence name into a &quot;canonical&quot; form,</span>
-<span class="sd">        which is essentially the Number format:</span>
-<span class="sd">        - Digits only for autosome</span>
-<span class="sd">        - X/Y for sexual</span>
-<span class="sd">        - M for mitochondrial</span>
-<span class="sd">        - Other sequences are not touched</span>
+<span class="sd">            which is essentially the Number format:</span>
+<span class="sd">            - Digits only for autosome</span>
+<span class="sd">            - X/Y for sexual</span>
+<span class="sd">            - M for mitochondrial</span>
+<span class="sd">            - Other sequences are not touched</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            sequence_name (str): Sequence to convert</span>
@@ -2717,6 +2607,23 @@ for progress tracking. Defaults to None.</p>
         <span class="k">elif</span> <span class="n">canonical_name</span> <span class="o">==</span> <span class="s2">&quot;*&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">SequenceType</span><span class="o">.</span><span class="n">Unmapped</span>
         <span class="k">return</span> <span class="n">SequenceType</span><span class="o">.</span><span class="n">Other</span>
+
+    <span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="n">sequence_names</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">others</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="n">name_type_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">SequenceType</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">sequence_names</span><span class="p">:</span>
+            <span class="n">name_type_map</span><span class="p">[</span><span class="n">Converter</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="n">ordered</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">Converter</span><span class="o">.</span><span class="n">canonicalize</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">name_type_map</span><span class="p">[</span><span class="n">SequenceType</span><span class="o">.</span><span class="n">Autosome</span><span class="p">]</span>
+        <span class="p">]</span>
+        <span class="n">ordered</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">ordered</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">name_type_map</span><span class="p">[</span><span class="n">SequenceType</span><span class="o">.</span><span class="n">X</span><span class="p">])</span>
+        <span class="n">ordered</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">name_type_map</span><span class="p">[</span><span class="n">SequenceType</span><span class="o">.</span><span class="n">Y</span><span class="p">])</span>
+        <span class="n">ordered</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">name_type_map</span><span class="p">[</span><span class="n">SequenceType</span><span class="o">.</span><span class="n">Mitochondrial</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">others</span><span class="p">:</span>
+            <span class="n">ordered</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">name_type_map</span><span class="p">[</span><span class="n">SequenceType</span><span class="o">.</span><span class="n">Other</span><span class="p">])</span>
+            <span class="n">ordered</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">name_type_map</span><span class="p">[</span><span class="n">SequenceType</span><span class="o">.</span><span class="n">Unmapped</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">ordered</span>
 
     <span class="k">def</span> <span class="nf">_find_in_table</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
         <span class="n">normalized</span> <span class="o">=</span> <span class="nb">input</span>
@@ -2790,11 +2697,11 @@ for progress tracking. Defaults to None.</p>
     <div class="doc doc-contents ">
 
       <p>Convert a sequence name into a "canonical" form,
-which is essentially the Number format:
-- Digits only for autosome
-- X/Y for sexual
-- M for mitochondrial
-- Other sequences are not touched</p>
+    which is essentially the Number format:
+    - Digits only for autosome
+    - X/Y for sexual
+    - M for mitochondrial
+    - Other sequences are not touched</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2850,8 +2757,7 @@ which is essentially the Number format:
 
             <details class="quote">
               <summary>Source code in <code>helix\naming\converter.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
-<span class="normal">17</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
@@ -2864,13 +2770,14 @@ which is essentially the Number format:
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">canonicalize</span><span class="p">(</span><span class="n">sequence_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">canonicalize</span><span class="p">(</span><span class="n">sequence_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a sequence name into a &quot;canonical&quot; form,</span>
-<span class="sd">    which is essentially the Number format:</span>
-<span class="sd">    - Digits only for autosome</span>
-<span class="sd">    - X/Y for sexual</span>
-<span class="sd">    - M for mitochondrial</span>
-<span class="sd">    - Other sequences are not touched</span>
+<span class="sd">        which is essentially the Number format:</span>
+<span class="sd">        - Digits only for autosome</span>
+<span class="sd">        - X/Y for sexual</span>
+<span class="sd">        - M for mitochondrial</span>
+<span class="sd">        - Other sequences are not touched</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        sequence_name (str): Sequence to convert</span>

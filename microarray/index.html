@@ -460,16 +460,20 @@
 
 
 <h1 id="microarray-template-format">Microarray template format</h1>
-<p>Every microarray template file is made by three different sections:
-1. A line containing metadata info for the file itself
-2. (Optional) Several lines containing comments
-3. Several lines containing IDs, Chromosome number, and position</p>
+<p>Every microarray template file is made by three different sections:</p>
+<ol>
+<li>A line containing metadata info for the file itself</li>
+<li>(Optional) Several lines containing comments</li>
+<li>Several lines containing IDs, Chromosome number, and position</li>
+</ol>
 <h2 id="1-metadata">1. Metadata</h2>
-<p>The metadata line is essentialy a JSON with the following field:
-1. <code>input_format</code>: specify the format of the lines in the 3rd sections (e.g., "{id}\t{chromosome}\t{position}\n")
-2. <code>output_format</code>: specify how a microarray file will be generated starting by the template (e.g., "{id}\t{chromosome}\t{position}\t{result}\n")
-3. <code>file_extention</code>: specify the extension of the output file (e.g., ".txt")
-4. <code>undetermined</code>: specify what's the placeholder to indicate that a result is not available (e.g., "00")</p>
+<p>The metadata line is essentialy a JSON with the following field:</p>
+<ol>
+<li><code>input_format</code>: specify the format of the lines in the 3rd sections (e.g., "{id}\t{chromosome}\t{position}\n")</li>
+<li><code>output_format</code>: specify how a microarray file will be generated starting by the template (e.g., "{id}\t{chromosome}\t{position}\t{result}\n")</li>
+<li><code>file_extention</code>: specify the extension of the output file (e.g., ".txt")</li>
+<li><code>undetermined</code>: specify what's the placeholder to indicate that a result is not available (e.g., "00")</li>
+</ol>
 <h2 id="2-comments">2. Comments</h2>
 <p>The comments are lines starting with a #. In the future it will be possible to use Jinjia variables here but at the moment this feature is not implemented.</p>
 <h2 id="3-result-entries">3. Result entries</h2>

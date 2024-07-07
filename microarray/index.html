@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://doublehelix.app/user-guide/">
+        <link rel="canonical" href="https://doublehelix.app/microarray/">
       
       
-        <link rel="prev" href="../microarray/">
+        <link rel="prev" href="../glossary/">
       
+      
+        <link rel="next" href="../user-guide/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>User guide - Documentation for DoubleHelix</title>
+        <title>Microarray template format - Documentation for DoubleHelix</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#user-guide" class="md-skip">
+        <a href="#microarray-template-format" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User guide
+              Microarray template format
             
           </span>
         </div>
@@ -283,26 +285,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../microarray/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Microarray template format
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -319,7 +301,7 @@
           
   
   <span class="md-ellipsis">
-    User guide
+    Microarray template format
   </span>
   
 
@@ -330,7 +312,7 @@
         
   
   <span class="md-ellipsis">
-    User guide
+    Microarray template format
   </span>
   
 
@@ -352,9 +334,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#main-ui" class="md-nav__link">
+  <a href="#1-metadata" class="md-nav__link">
     <span class="md-ellipsis">
-      Main UI
+      1. Metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-result-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Result entries
     </span>
   </a>
   
@@ -364,6 +364,26 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User guide
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -395,9 +415,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#main-ui" class="md-nav__link">
+  <a href="#1-metadata" class="md-nav__link">
     <span class="md-ellipsis">
-      Main UI
+      1. Metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-result-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Result entries
     </span>
   </a>
   
@@ -421,90 +459,21 @@
   
 
 
-<h1 id="user-guide">User guide</h1>
-<p>This page explains the main window of DoubleHelix. Will add some screenshot when the UI will be more mature.</p>
-<h2 id="main-ui">Main UI</h2>
-<p>Once opened, you can drag the file you want to open into the UI. A table with basic information about the file will open.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Directory</td>
-<td>Directory that contains the file that is loaded in the app. Double click the field to open the directory in a file manager (if available).</td>
-</tr>
-<tr>
-<td>File</td>
-<td>Name of the file loaded</td>
-</tr>
-<tr>
-<td>File Type</td>
-<td>See <a href="#file-type">file type</a></td>
-</tr>
-<tr>
-<td>Reference</td>
-<td>See <a href="#reference">reference</a>. Double click to open a window containing information about similar or identical reference genomes.</td>
-</tr>
-<tr>
-<td>Gender</td>
-<td>Biological gender of the person who sampled the DNA contained in the loaded file. The field it's available only if index stats are available.</td>
-</tr>
-<tr>
-<td>Sorted</td>
-<td>Indicates whether the file is sorted (add explanation here)</td>
-</tr>
-<tr>
-<td>Indexed</td>
-<td>Indicates whether the loaded file has an index file (a .bai or .crai file depending on the format)</td>
-</tr>
-<tr>
-<td>Mitochondrial DNA Model</td>
-<td>Gapped reference genomes contains are based on known models for the mitochondrial DNA. If the model of the reference associated with the loaded file is known it will be specified here.</td>
-</tr>
-<tr>
-<td>Header</td>
-<td>Open a window containing information on the header (see <a href="#header">header</a>)</td>
-</tr>
-<tr>
-<td>Alignment stats</td>
-<td>Open a window containing information on alignment stats (see <a href="#alignment-stats">alignemnt stats</a>)</td>
-</tr>
-</tbody>
-</table>
-<h1 id="reference">Reference</h1>
-<p>The reference field can have these values:</p>
-<ul>
-<li>Available: DoubleHelix is able to recognize the reference genome used to align the loaded file and the file is on disk</li>
-<li>Downloadable: DoubleHelix is able to recognize the reference genome used to align the file but the file is not on disk. DoubleHelix know its URL and the file can be downloaded.</li>
-<li>Unknown: There is one or more sequences that DoubleHelix is not able to recognize. There's no way for DoubleHelix to obtain a reference genome and the user needs to tell DoubleHelix how to find it. See <a href="#ingestion">ingestion</a></li>
-<li>Buildable: DoubleHelix is not able to find a single file that is a perfect match with the references that was used to align the loaded file, but DoubleHelix knows multiple files that can be used together to build a reference.</li>
-</ul>
-<p>The reference window can be opened by clicking on the "Reference" field in the main UI. It contains information about the reference genome used to align the file (if it is available) or information about similar reference genomes.</p>
-<p>Every column in the reference window are related to a specific reference that has some information matching with the reference used to align the file.</p>
-<h2 id="header">Header</h2>
-<p>Header window can be opened by clicking on the "Header" field in the Main UI. It contains a 1:1 representation of the information contained in the header of the loaded file.</p>
-<h3 id="sequences">Sequences</h3>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fillme</td>
-<td>Fillme</td>
-</tr>
-</tbody>
-</table>
-<h3 id="programs">Programs</h3>
-<h3 id="read-groups">Read groups</h3>
-<h3 id="comments">Comments</h3>
+<h1 id="microarray-template-format">Microarray template format</h1>
+<p>Every microarray template file is made by three different sections:
+1. A line containing metadata info for the file itself
+2. (Optional) Several lines containing comments
+3. Several lines containing IDs, Chromosome number, and position</p>
+<h2 id="1-metadata">1. Metadata</h2>
+<p>The metadata line is essentialy a JSON with the following field:
+1. <code>input_format</code>: specify the format of the lines in the 3rd sections (e.g., "{id}\t{chromosome}\t{position}\n")
+2. <code>output_format</code>: specify how a microarray file will be generated starting by the template (e.g., "{id}\t{chromosome}\t{position}\t{result}\n")
+3. <code>file_extention</code>: specify the extension of the output file (e.g., ".txt")
+4. <code>undetermined</code>: specify what's the placeholder to indicate that a result is not available (e.g., "00")</p>
+<h2 id="2-comments">2. Comments</h2>
+<p>The comments are lines starting with a #. In the future it will be possible to use Jinjia variables here but at the moment this feature is not implemented.</p>
+<h2 id="3-result-entries">3. Result entries</h2>
+<p>Each line here must match the format specified in <code>input_format</code>.</p>
 
 
 

@@ -360,6 +360,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -441,6 +450,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -462,9 +480,10 @@
 <h1 id="microarray-template-format">Microarray template format</h1>
 <p>Every microarray template file is made by three different sections:</p>
 <ol>
-<li>A line containing metadata info for the file itself</li>
-<li>(Optional) Several lines containing comments</li>
-<li>Several lines containing IDs, Chromosome number, and position</li>
+<li>A line that starts in <code>##</code> containing metadata info for the file itself</li>
+<li>(Optional) Several lines containing comments starting in <code>#</code></li>
+<li>(Optional) Lines that will be skipped</li>
+<li>Several lines containing the actual entries of the file</li>
 </ol>
 <h2 id="1-metadata">1. Metadata</h2>
 <p>The metadata line is essentialy a JSON with the following field:</p>
@@ -473,11 +492,24 @@
 <li><code>output_format</code>: specify how a microarray file will be generated starting by the template (e.g., <code>{id}\t{chromosome}\t{position}\t{result}\n</code>)</li>
 <li><code>file_extention</code>: specify the extension of the output file (e.g., <code>.txt</code>)</li>
 <li><code>undetermined</code>: specify what's the placeholder to indicate that a result is not available (e.g., <code>00</code>)</li>
+<li><code>skip</code>: how many lines to skip after the header</li>
 </ol>
 <h2 id="2-comments">2. Comments</h2>
 <p>The comments are lines starting with a #. In the future it will be possible to use Jinjia variables here but at the moment this feature is not implemented.</p>
 <h2 id="3-result-entries">3. Result entries</h2>
 <p>Each line here must match the format specified in <code>input_format</code>.</p>
+<h2 id="example">Example</h2>
+<p>Putting all together, this is an example of a valid template file:
+<div class="highlight"><pre><span></span><code>## {&quot;input_format&quot;:&quot;{id}\t{chromosome}\t{position}\n&quot;, &quot;output_format&quot;:&quot;{id}\t{chromosome}\t{position}\t{result}\n&quot;, &quot;file_extension&quot;:&quot;.txt&quot;, &quot;undetermined&quot;:&quot;--&quot;, &quot;skip&quot;:1}
+# This is a comment
+rsid    chromosome  position    genotype
+rs00001 chr1    1
+</code></pre></div></p>
+<p>Using a VCF file to populate a microarray file with this template will produce a file that can be like this as it matches the <code>output_format</code> specified above:
+<div class="highlight"><pre><span></span><code># This is a comment
+rsid    chromosome  position    genotype
+rs00001 chr1    1   AA
+</code></pre></div></p>
 
 
 
